@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/png" id="favicon" href="./assets/resource//favicon1.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Plix theme</title>
+</head>
+<body>
+    <style>
+        body {
+            overflow-y:hidden;
+        }
+    </style>
+    <img id="cursor" src="./assets/resource/pointer.png" alt="">
+
+    <div id="preloader">
+        <img src="./assets/resource/logo1.png" alt="">
+        <div class="progressbar"></div>
+        <div class="circles">
+            <div class="c1"></div>
+            <div class="c2"></div>
+            <div class="c3"></div>
+        </div>
+        
+        
+    </div>
+    <div id="overlay"></div>
+    <canvas id="bgcanvas"></canvas> 
+    <canvas id="fgcanvas"> </canvas> 
+
+    <div id="modal_container">
+        <div id="modal">
+            <img id="modalclose"src="./assets/resource/close.png" alt="">
+            <div class="modaltittle">
+                <h1>YOU'RE ALMOST THERE!</h1><span class="iconspacing1"></span><img id="emoji" src="assets/resource/partypopper.png" alt="">
+      
+            </div>
+           
+            <p>
+                Visit the patreon page and become a patron to get access to the skin and our Discord Server. You can also give leave me a tip on kofi.
+            </p>
+                <div class="iconsmodal">
+                    <a onmouseover="kofittip()" href="https://ko-fi.com/jjangless" 
+                    target="_blank" > 
+                        <img  class="Kofi" data-tilt
+                             src="./assets/resource/plix kofi logo.png" 
+                            alt="plix KOFI LOGO"/>
+                    </a>   
+                    <span class="iconspacing" ></span>
+                    <a href="https://www.patreon.com/PlixForSteam"
+                    target="_blank">
+                        <img class="Patreon" data-tilt
+                            src="./assets/resource/plix patreon logo.png"
+                            alt="plix GITHUB LOGO"
+                             />
+                    </a>
+                </a>
+                <span class="iconspacing"></span>
+                <a href="https://www.patreon.com/PlixForSteam"
+                target="_blank">
+                    <img class="Discord" data-tilt src="./assets/resource/plix discord logo.png" alt="PLIX DISCORD LOGO" />
+                </a>
+                </div>
+        </div>
+    </div>
+ 
+       
+    </div>
+    
+  <section id="sec-0">
+    <header class="header" data-aos="fade-down">
+        <div class="logo_container">
+            <a href="#">
+                <img id="logo"src="./assets/resource/logo1.png" alt="" data-tilt >
+                <h2 id="sitename">PLIX</h2>
+            </a>
+            
+        </div>
+    
+    
+        <div class="navigation">
+            <input type="checkbox" id="toggle-menu">
+            <div class="hamburger"></div>
+    
+            <ul id="menu">
+                <a href="#"><button id="button3">DOWNLOAD</button></a>
+                
+              
+                <button id="button1">HOW TO INSTALL</button>
+            </ul>
+    
+        </div>
+    
+    </header>
+  </section> 
+  
+  
+            <div class="content1"   >
+                <div class="main" >
+                    <div class="blobcontainer">
+                        <video id="blob" src="./assets/resource/blob.webm" loop muted autoplay></video>
+                    </div>
+                    <video id="char1" src="./assets/resource/char1.webm"muted></video>
+                        <video id="char2" src="./assets/resource/char2.webm"muted></video>
+                        
+                        <img id="mainarrow" src="./assets/resource/pointer.png" alt="">
+
+                        <div class="mainimgcontainer" data-tilt>             
+                        <img id="lightclient" src="./assets/resource/light.png" alt="" />
+                        <img id="darkclient"  src="./assets/resource/dark.png" alt="" />
+                        </div>
+
+                    </div>
+                      
+                </div>
+
+            <section id="sec-2">
+                    <div class="content2">
+                        <h4 id="con2h41">
+                            PLIX is a the most beautiful skin for steam that modernizes the whole
+                            steam client.
+                        </h4>
+                            <h4 id="con2h42">
+                                A new look for the platform you already know and love.
+                                plix is fresh and exciting from the moment you open
+                                Steam.
+                            </h4>
+                        <div id="button5bg"></div>
+                            <button id="button5"></button>
+                     </div>
+            </section>
+
+
+            <section id="sec-3">
+                <div class="content3"   data-aos="fade-down">
+                    <span class="divider1"></span>
+                        <h2>HOW TO INSTALL</h2>
+                        <div class="steps">
+                            <ul>
+                                <li>
+                                    Navigate to steamui folder, it is usually located in "C:\Program Files (x86)\Steam\steamui" 
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    In the google drive go to the web folder and choose light or dark 
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    Place the libraryrootcustom.css file in the steamui folder
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    In the google drive go to FONTS folder and install all the fonts there
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    Install                         
+                                    <a href="https://github.com/PhantomGamers/SFP" target="_blank"
+                                      >https://github.com/PhantomGamers/SFP</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    Launch steamfriendspatcher and it will apply the library skin
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+            </section>
+    
+            <section id="sec-4">
+                <div class="content4 aos-init aos-animate" data-aos="fade-down">
+                    <span class="divider2"></span>
+                        <h2>CREDITS</h2>
+
+                        <div class="credits">
+                            <ul>
+                                <li>
+                                    <a href="https://github.com/PhantomGamers" target="_blank">PHANTOMGAMERS</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="https://github.com/Jonius7" target="_blank">JONIUS7</a>
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="https://github.com/AikoMidori" target="_blank">SHIINA</a>
+                                </li>
+                            </ul>  
+                    </div>
+                </div>
+            </section>
+
+
+            <div id="footer">
+                <h4 class="copyright"></h4>
+                <button id="button4"><img src="./assets/resource/scrolltotop.png" alt=""></button>
+                
+            </div>
+
+            <script type="module" src="./assets/js/bgcanvas.js"></script>
+            <script type="module" src="./assets/js/fgcanvas.js"></script>
+            <script src="./assets/js/tilt.js"></script>
+            <script type ="module" src="./assets/js/mainjump.js"></script>
+            <script type="module" src=./assets/js/main.js></script>
+            <script src="./assets/js/aos.js"></script>
+            <script> AOS.init() </script>
+</body>
+</html>
