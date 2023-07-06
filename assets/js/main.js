@@ -16,6 +16,10 @@ const bloby = document.getElementById("blob");
 const blobcon = document.querySelector('.blobcontainer');
 const copyrightyear =  new Date().getFullYear();
 const customcursor = document.getElementById('cursor');
+const link1 = document.getElementById('link1');
+const link2 = document.getElementById('link2');
+const link3 = document.getElementById('link3');
+const link4 = document.getElementById('link4');
 const fgcanvas = document.getElementById("fgcanvas");
 const con2h1 = document.getElementById('con2h41');
 const con2h2 = document.getElementById('con2h42');
@@ -37,8 +41,10 @@ window.addEventListener("load", function(){
 
 document.body.addEventListener("wheel", e => {
     customcursor.setAttribute("style","top: "+(e.pageY +12- scrollY)+"px; left: "+(e.pageX+9)+"px")
-    ttipcontainer.setAttribute("style","top: "+(e.pageY +52- scrollY)+"px; left: "+(e.pageX+9)+"px")
+    // customcursor2.setAttribute("style","top: "+(e.pageY +12- scrollY)+"px; left: "+(e.pageX+9)+"px")
 });
+
+
 
 
 
@@ -49,6 +55,7 @@ function func1(e) {
     }
 
     customcursor.setAttribute("style","top: "+(e.pageY +12- scrollY)+"px; left: "+(e.pageX+9)+"px")
+    // customcursor2.setAttribute("style","top: "+(e.pageY +12- scrollY)+"px; left: "+(e.pageX+9)+"px")
 }
 
 function func2(e) {
@@ -176,6 +183,40 @@ document.querySelector('.copyright').innerHTML = "©" + " " + copyrightyear + " 
                         mainarrow.style.animation = "mainarrowop 2s 1.4s forwards ease-in-out,diagonal 2s infinite forwards ease-in-out"
                    
                     })
+
+                    link1.addEventListener ( 'mouseover', () => {
+                        document.getElementById("cursor").src = "./assets/resource/link.png";
+                        })
+
+                        link1.addEventListener ( 'mouseleave', () => {
+                            document.getElementById("cursor").src = "./assets/resource/cursor.png";
+                            })
+
+                          link2.addEventListener ( 'mouseover', () => {
+                           document.getElementById("cursor").src = "./assets/resource/link.png";
+                          })
+        
+                          link2.addEventListener ( 'mouseleave', () => {
+                                    document.getElementById("cursor").src = "./assets/resource/cursor.png";
+                                    })
+
+                             link3.addEventListener ( 'mouseover', () => {
+                                        document.getElementById("cursor").src = "./assets/resource/link.png";
+                                        })
+                
+                                        link3.addEventListener ( 'mouseleave', () => {
+                                            document.getElementById("cursor").src = "./assets/resource/cursor.png";
+                                            })
+                                        
+                                        
+                                        link4.addEventListener ( 'mouseover', () => {
+                                        document.getElementById("cursor").src = "./assets/resource/link.png";
+                                        })
+                
+                                        link4.addEventListener ( 'mouseleave', () => {
+                                            document.getElementById("cursor").src = "./assets/resource/cursor.png";
+                                            })
+        
 
 document.onclick = function(clickEvent){
     if(clickEvent.target.id !== "menu" && clickEvent.target.id !== "toggle-menu")  {
