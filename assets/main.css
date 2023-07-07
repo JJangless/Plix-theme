@@ -598,6 +598,7 @@ body {
 }
 
 .modaltittle {
+    word-spacing:4px;
     display:flex;
 }
 
@@ -718,12 +719,6 @@ body {
     margin-top: 10%;
     white-space:nowrap;
 }
-
-
-
-/* .logo_container:hover{
-  animation:blobpulse 2s ease-in-out;
-} */
 
 .logo_container a img{
     float:left;
