@@ -31,7 +31,15 @@ function getwavy() {
 	if (state.clienthover) {
 		t1 += .0011;
 	}else {
-		t1 += .00009;
+		t1 += .00019;
+	}
+  }
+
+  function getreallywavy() {
+	if (wave<12) {
+		wave += 0.1;
+	}else {
+		wave = 12;
 	}
   }
 
@@ -40,7 +48,7 @@ renderer.setPixelRatio(window.devicePixelRatio);
 document.body.appendChild(renderer.domElement);
 
 var grid = new THREE.GridHelper(100, 10);
-
+var wave = 0;
 const controls = new OrbitControls(camera,fgcanvas);
 
 const planegeo = new THREE.PlaneBufferGeometry(200,106,90,90);
@@ -77,13 +85,10 @@ function updatemyvert (geom) {
 
 	var myvert = geom.geometry.attributes.position.array;
 	for ( var i = 0; i <= myvert.length; i+=3) {
-		myvert[i+2] = perlin.noise(myvert[i]/40 + t1, myvert[i+1]/40 + t1 ) * 12;
+		myvert[i+2] = perlin.noise(myvert[i]/40 + t1, myvert[i+1]/40 + t1 ) * wave;
 	}
 	geom.geometry.attributes.position.needsUpdate = true;
 }
-
-// line.position.y =	-62
-// terrain.position.y =	-62.2
 
 line.position.y =	-22
 terrain.position.y =	-22.2
@@ -93,12 +98,13 @@ terrain.rotation.x =	THREE.MathUtils.degToRad(90)
 
  scene.add(terrain,line);
 
-// scene.add(grid);
-
 camera.position.z = 65;	
 
- setTimeout(() => {
+
 	function animate(){	
+		setTimeout(() => {
+		getreallywavy();
+	}, 1700);
 		getwavy();
 		getshady();
 		requestAnimationFrame(animate);
@@ -108,7 +114,7 @@ camera.position.z = 65;
 		renderer.render(scene,camera);
 	}
 	animate();   
-}, 2300);
+
 
 
 

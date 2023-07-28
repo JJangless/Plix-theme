@@ -36,7 +36,7 @@ window.addEventListener("load", function(){
     main.style.animation = "mainimgop 2s forwards, levitate1 1.1s 1s infinite alternate forwards ease-in-out"
     bloby.currentTime = 0;
     blobcon.style.animation = "blobscaleup 2.5s 1.5s forwards";
-    fgcanvas.style.animation = "showcanvas 1.5s 2s forwards ease-in-out";
+    fgcanvas.style.animation = "showcanvas 2s forwards ease-in-out";
 })
 
 document.body.addEventListener("wheel", e => {
