@@ -672,13 +672,14 @@ body {
 
 
 .header {
+    background:green;
     z-index:996;
     position:relative;
     width:100%;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:22px 4%;
+    padding:25px 4%;
     transition: .03s;
 }
 
@@ -692,13 +693,13 @@ body {
 .logo_container h2 {
     text-decoration:none;
     font-weight:bold;
-    margin-top: 12px;
+    margin-top: 10%;
     white-space:nowrap;
 }
 
 .logo_container a img{
     float:left;
-    max-width:40%;
+    max-width:50%;
     padding-right:10px;
 }
 
@@ -830,25 +831,28 @@ button {
 }
 
 .blobcontainer {
+    /* background:orange; */
+    max-width:100%;
     position:absolute;
     display:flex;
     justify-content:center;
     align-items:center;
     z-index:993;
     opacity:0;
+    height: 700px;
 }
 
-#blob {
-    height:920px;
-}
+
 
 .main {
+    background:red;
+    /* margin-top:200px; */
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
     width:100%;
-    height: 628px;
+    height: 700px;
   
 }
 
@@ -891,12 +895,11 @@ button {
 }
 
 .mainimgcontainer {
-    border:4px solid orange;
     display:none;
     z-index:995;
     border-radius:4px;
-    height:295px;
-    width:500px;
+    height:308px;
+    width:520px;
     opacity:0;
     position:relative;
     display:flex;
@@ -907,7 +910,7 @@ button {
 #lightclient {  
     border-radius:4px;
     position:absolute;
-    width:500px;
+    width:520px;
     min-width:0;
     align-items:center;
     justify-content:center;
@@ -918,7 +921,7 @@ button {
 #darkclient {
     border-radius:4px;
     position:absolute;
-    width:500px;
+    width:520px;
     min-width:0;
     align-items:center;
     justify-content:center;
@@ -947,6 +950,7 @@ button {
 
 
 .content2 {
+    background:purple;
     color:var(--white);
     display:flex;
     flex-direction:column;
@@ -954,18 +958,18 @@ button {
     justify-content:center;
     text-align:center;
     width:100%;
+    height:356px;
+
 }
 
 
 #con2h41 {
     z-index:996;
     padding:3px 15px;
-    margin-top:4px;
     border-radius:10px;
-    line-height:1.6rem;
     text-align: center;
     color: VAR(--white);
-    background-color: var(--black1);
+    background-color:orange;
     font-weight:200;  
 }
 
@@ -973,30 +977,20 @@ button {
     z-index:996;
     padding:3px 15px;
     border-radius:10px;
-    line-height:1.6rem;
+    line-height:1.9rem;
     text-align: center;
     color: VAR(--white);
-    background-color: var(--black1);
+    background-color:orange;
     font-weight:200;  
-}
-
-#button5bg {
-    z-index:996;
-    pointer-events:none;
-    border-radius:50px;
-    position:absolute;
-    bottom:34px;
-    height:50px;
-    min-width:26px;
-    background-color:var(--black1)
 }
 
 #button5 {
     z-index:996;
     position:absolute;
-    bottom:24px;
+    bottom:0;
     height:70px;
     min-width:46px;
+    background:blue;
     border-radius:50px;
     cursor:pointer;
 }
@@ -1007,10 +1001,21 @@ button {
     background-color:var(--black2);
 }
 
+#button5bg {
+    z-index:996;
+    pointer-events:none;
+    border-radius:50px;
+    position:absolute;
+    bottom:10px;
+    height:50px;
+    min-width:26px;
+    background-color:var(--black1)
+}
+
 #button5::before {
     content:'';
     position:absolute;
-    bottom:-20px;
+    bottom:-19px;
     height:50px;
     min-width:26px;
     border:2px solid var(--white,white);
@@ -1022,6 +1027,8 @@ button {
     content:'';
     z-index:1;
     position:absolute;
+    top:33%;
+    left:50%;
     height:10px;
     width:10px;
     background-color:var(--white,white);
