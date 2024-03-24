@@ -891,7 +891,6 @@ button {
 }
 
 .mainimgcontainer {
-    border:4px solid orange;
     display:none;
     z-index:995;
     border-radius:4px;
