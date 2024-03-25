@@ -51,7 +51,7 @@ a:hover, button:hover, img:hover,a, button, img {
     position:absolute;
     left:50%;
     transform:translateX(-50%);
-    max-height:150px;
+    max-height:100px;
     animation:blobpulse 2s infinite;
 }
 
@@ -613,7 +613,8 @@ body {
 
 
 .iconsmodal img {
-   
+    border-radius:50px;
+   box-shadow:5px 4px 20px #0000009a;
     height: 80px;
     animation: logobutton .1s ease-in-out;
 }
@@ -678,7 +679,7 @@ body {
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:22px 4%;
+    padding:30px 4%;
     transition: .03s;
 }
 
@@ -686,25 +687,26 @@ body {
     align-items:center;
     justify-content:middle;
     display:flex;
-    height:100%;
-}
-
-.logo_container h2 {
-    text-decoration:none;
-    font-weight:bold;
-    margin-top: 12px;
-    white-space:nowrap;
 }
 
 .logo_container a img{
+
     float:left;
-    max-width:40%;
-    padding-right:10px;
+    height:50px;
+    padding-right:14px;
 }
 
 .logo_container a{
     color:var(--white);
     text-decoration:none;
+    white-space:nowrap;
+}
+
+.logo_container h2 {
+    text-decoration:none;
+    font-weight:bold;
+    margin-top: 5px;
+    white-space:nowrap;
 }
 
 .logo_container a:visited{
