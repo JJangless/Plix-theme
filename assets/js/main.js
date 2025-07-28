@@ -2,8 +2,9 @@ import * as THREE from './three.module.js'
 import { dotmat, terrainmat } from './fgcanvas.js';
 import state from './state.js'
 
+var innerWidth1 = window.innerWidth;
+var sboffset = innerWidth1 -22;
 const faviconimage = document.querySelector("#favicon")
-var sboffset = innerWidth -20;
 const navinput =  document.querySelector(".navigation input");
 const light = document.getElementById("lightclient");
 const dark = document.getElementById("darkclient");
@@ -39,6 +40,8 @@ window.addEventListener("load", function(){
     fgcanvas.style.animation = "showcanvas 2s forwards ease-in-out";
 })
 
+console.log("The inner width of the window is: " + innerWidth + "px");
+
 document.body.addEventListener("wheel", e => {
     customcursor.setAttribute("style","top: "+(e.pageY +12- scrollY)+"px; left: "+(e.pageX+9)+"px")
     // customcursor2.setAttribute("style","top: "+(e.pageY +12- scrollY)+"px; left: "+(e.pageX+9)+"px")
@@ -50,19 +53,21 @@ document.body.addEventListener("wheel", e => {
 
 function func1(e) {
     if (e.pageX > sboffset) {
-        document.body.style.cursor = "normal"   
-        customcursor.style.opacity = "0"
+        console.log("The cursor changed to the default");
+          customcursor.style.opacity = "0"
+        document.body.style.cursor = "inherit"
     }
+    else
+        {
+            customcursor.style.opacity = "100%"
+            document.body.style.cursor = "none"
+    }
+ 
 
     customcursor.setAttribute("style","top: "+(e.pageY +12- scrollY)+"px; left: "+(e.pageX+9)+"px")
-    // customcursor2.setAttribute("style","top: "+(e.pageY +12- scrollY)+"px; left: "+(e.pageX+9)+"px")
 }
 
-function func2(e) {
-    document.body.addEventListener("mousemove", e => {
-        ttipcontainer.setAttribute("style","top: "+(e.pageY +52- scrollY)+"px; left: "+(e.pageX+9)+"px")
-    });
-}
+
 
 document.addEventListener('mousemove',func1);
 
@@ -71,7 +76,7 @@ document.addEventListener('mouseup', e => {
     if (e.button == 1) {
         document.removeEventListener('mousemove',func1);
         customcursor.style.opacity = "0"
-        document.body.style.cursor = "normal"
+        document.body.style.cursor = "inherit"
         }
         else if (e.button == 0) {    
             customcursor.setAttribute("style","top: "+(e.pageY +12- scrollY)+"px; left: "+(e.pageX+9)+"px")
@@ -83,7 +88,7 @@ document.addEventListener('mouseup', e => {
         else if (e.button == 2) {    
             document.removeEventListener('mousemove',func1);
             customcursor.style.opacity = "0"
-            document.body.style.cursor = "normal"
+            document.body.style.cursor = "inherit"
         }
 })
 

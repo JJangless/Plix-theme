@@ -437,14 +437,14 @@ html {
         
     }
     100% {
-        transform: scale(1.4);
+        transform: scale(1.2);
     }   
 }
 
 @keyframes scrolltotopscaledown {
     0% {
         
-        transform: scale(1.4);
+        transform: scale(1.2);
     }
     100% {
         transform: scale(1);
@@ -878,7 +878,7 @@ button {
     position:absolute;
     left:50%;
     right:50%;
-    width:40px;
+    width:46px;
     margin-left:250px;
     margin-top:310px;
     opacity:0;
@@ -1149,7 +1149,7 @@ ul {
     color:var(--white);
     position:absolute;
     left:0;
-    padding-left: 20px;
+    margin-left: 20px;
 }
 
 .p2 {
@@ -1174,10 +1174,6 @@ ul {
     animation: twitscaledown 0.2s forwards;
 }
 
-button4 {
-   
-}
-
 #button4 img {
     width:22px;
     height:12px;
@@ -1186,7 +1182,30 @@ button4 {
     
 }
 
+#button6 {
+    position:absolute;
+    right:0;
+    margin-top:4px;
+    margin-right: 20px;
+}
+
+#button6:hover{
+animation: scrolltotopscaleup .5s forwards;
+}
+
+#button6 img {
+    width:24px;
+    height:24px;
+    cursor:pointer;
+    animation:scrolltotopscaledown .5s;
+    
+}
+
 #button4:hover {
+   animation: scrolltotopscaleup .5s forwards;
+}
+
+#button6:hover {
    animation: scrolltotopscaleup .5s forwards;
 }
 

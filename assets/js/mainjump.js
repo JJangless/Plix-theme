@@ -4,6 +4,7 @@ var  button1 = document.getElementById('button1');
 var  button3 = document.getElementById('button3');
 var  button4 = document.getElementById('button4');
 var  button5 = document.getElementById('button5');  
+// var  button6 = document.getElementById('button6');  
 const blob = document.getElementById('blob');
 const modalcon = document.getElementById('modal_container');
 const modal = document.getElementById('modal');
@@ -13,6 +14,7 @@ var  overlay = document.getElementById('overlay');
 button1.addEventListener('click', () => {
     jump('#sec-3');
 })
+
 
 function hidemodal() {
     document.body.style.overflow = "visible"
