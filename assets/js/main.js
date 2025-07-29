@@ -35,10 +35,17 @@ window.addEventListener("load", function(){
     document.body.style.overflowX = "hidden"
     loader.style.animation = "fadeout .2s forwards ease-in-out";
     main.style.animation = "mainimgop 2s forwards, levitate1 1.1s 1s infinite alternate forwards ease-in-out"
-    bloby.currentTime = 0;
     blobcon.style.animation = "blobscaleup 2.5s 1.5s forwards";
+    bloby.currentTime = 0;
     fgcanvas.style.animation = "showcanvas 2s forwards ease-in-out";
 })
+
+    
+    blobcon.addEventListener('animationend', (event) => {
+    console.log('Animation finished for:', event.target);
+    bloby.play();
+    });
+
 
 console.log("The inner width of the window is: " + innerWidth + "px");
 

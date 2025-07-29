@@ -659,7 +659,8 @@ body {
     align-items:center;
     justify-content:center;
     padding:50px 0;
-    background:linear-gradient(45deg, var(--black3),var(--black2)); 
+    /* background:linear-gradient(45deg, var(--black3),var(--black2));  */
+    background: var(--black3); 
     border:1px solid var(--black2);
     border-radius:10px;
  
