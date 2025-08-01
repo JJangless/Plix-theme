@@ -56,7 +56,7 @@ const planegeo = new THREE.PlaneBufferGeometry(200,106,90,90);
 
 
 var loader = new THREE.TextureLoader;
-const mydot= loader.load('./assets/resource/dot.png')
+const mydot= loader.load('resource/dot.png')
 
 
 export const terrainmat = new THREE.MeshBasicMaterial({

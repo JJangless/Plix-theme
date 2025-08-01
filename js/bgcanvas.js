@@ -1,13 +1,10 @@
 import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.module.js'
 import { OrbitControls } from './OrbitControls.js';
-import Perlin from "./perlin.js"
-
-const perlin = new Perlin()
 
 var scene = new THREE.Scene();
 
 var loader = new THREE.TextureLoader;
-const mydot= loader.load('./assets/resource/dot.png')
+const mydot= loader.load('resource/dot.png')
 
 var camera = new THREE.PerspectiveCamera(75, innerWidth / innerHeight , 1.5, 1000);	
 var renderer = new THREE.WebGLRenderer({
@@ -59,8 +56,6 @@ camera.position.z = 1;
 
 
 function animate(){
-
-	// t+=0.0005;
 
     pointsmesh.rotation.y += .00005
 

@@ -1,189 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/png" id="favicon" href="./assets/resource//favicon1.png" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="shortcut icon" type="image/png" id="favicon" href="resource//favicon1.png" />
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Plix theme</title>
 </head>
+
 <body>
-    <style>
-        body {
-            overflow-y:hidden;
-        }
-    </style>
-    <img id="cursor" src="./assets/resource/cursor.png" alt="">
-
+    <img id="cursor" src="resource/cursor.png" alt="">
     <div id="preloader">
-        <img src="./assets/resource/logo1.png" alt="">
-        
-        
+        <img src="resource/logo1.png" alt="">
     </div>
-    <div id="overlay"></div>
-    <canvas id="bgcanvas"></canvas> 
-    <canvas id="fgcanvas"> </canvas> 
+    <canvas id="fgcanvas"> </canvas>
+    <div id="modal" class="modal">
+        <div id="modal-content">
+            <button id="modalclose"><img src="resource/close.png" alt=""></button>
 
-    <div id="modal_container">
-        <div id="modal">
-            <img id="modalclose"src="./assets/resource/close.png" alt="">
             <div class="modaltittle">
-                <h1>YOU'RE ALMOST THERE!</h1><span class="iconspacing1"></span><img id="emoji" src="assets/resource/partypopper.png" alt="">
-      
+                <h1>YOU'RE ALMOST THERE!</h1><span></span><img id="emoji" src="resource/partypopper.png" alt="">
             </div>
-           
-            <p>
-                Visit the patreon page and become a patron to get access to the skin and our Discord Server. You can also give leave me a tip on kofi.
-            </p>
-                <div class="iconsmodal">
+            <p>Visit the patreon page and become a patron to get access to the skin and our Discord Server. You can also
+                give leave me a tip on kofi.</p>
+            <div class="modal-buttons">
 
-                    <a href="https://ko-fi.com/jjangless"
-                     target="_blank"> 
-                        <img  class="Kofi" data-tilt
-                             src="./assets/resource/plix kofi logo.png" 
-                            alt="plix KOFI LOGO"/>
-                    </a>   
-                    <span class="iconspacing" ></span>
-                    <a href="https://www.patreon.com/PlixForSteam"
-                    target="_blank">
-                        <img class="Patreon" data-tilt
-                            src="./assets/resource/plix patreon logo.png"
-                            alt="plix GITHUB LOGO"
-                             />
-                    </a>
+                <a href="https://ko-fi.com/jjangless">
+                    <img src="resource/plix kofi logo.png" alt="Button 1">
                 </a>
-                <span class="iconspacing"></span>
-                <a href="https://www.patreon.com/PlixForSteam"
-                target="_blank">
-                    <img class="Discord" data-tilt src="./assets/resource/plix discord logo.png" alt="PLIX DISCORD LOGO" />
+
+                <a href="https://www.patreon.com/PlixForSteam">
+                    <img src="resource/plix patreon logo.png" alt="Button 2">
                 </a>
-                </div>
+
+                <a href="https://www.patreon.com/PlixForSteam">
+                    <img src="resource/plix discord logo.png" alt="Button 3">
+                </a>
+
+            </div>
         </div>
     </div>
- 
-       
-    </div>
-    
-  <section id="sec-0">
-    <header class="header" data-aos="fade-down">
-        <div class="logo_container">
-            <a href="#">
-                <img id="logo"src="./assets/resource/logo1.png" alt="" data-tilt >
-                <h2 id="sitename">PLIX</h2>
-            </a>
-            
+
+    <header>
+        <div class="logo-container">
+            <img id="logo" src="resource/logo1.png" alt="Logo">
+            <span id="logo-text">PLIX</span>
         </div>
-    
-    
-        <div class="navigation">
-            <input type="checkbox" id="toggle-menu">
-            <div class="hamburger"></div>
-    
-            <ul id="menu">
-                <a href="#"><button id="button3">DOWNLOAD</button></a>
-                
-              
-                <button id="button1">HOW TO INSTALL</button>
-            </ul>
-    
+        <div class="header-buttons">
+            <button id="button1">DOWNLOAD</button>
+            <button id="button2">HOW TO INSTALL</button>
         </div>
-    
     </header>
-  </section> 
-  
-  
-            <div class="content1"   >
-                <div class="main" >
-                    <div class="blobcontainer">
-                        <video id="blob" src="./assets/resource/blob.webm" loop muted></video>
-                    </div>
-                    <video id="char1" src="./assets/resource/char1.webm"muted></video>
-                        <video id="char2" src="./assets/resource/char2.webm"muted></video>
-                        
-                        <img id="mainarrow" src="./assets/resource/cursor.png" alt="">
 
-                        <div class="mainimgcontainer" data-tilt>             
-                        <img id="lightclient" src="./assets/resource/light.png" alt="" />
-                        <img id="darkclient"  src="./assets/resource/dark.png" alt="" />
-                        </div>
+    <section id="section1">
+        <main class="content1">
+            <div id="blobcontainer">
+                <video id="blob" class="blobanimate" src="resource/blob.webm" loop muted></video>
+            </div>
+            <video id="char1" src="resource/char1.webm" muted></video>
+            <video id="char2" src="resource/char2.webm" muted></video>
 
-                    </div>
-                      
-                </div>
+            <img id="clientarrow" src="resource/cursor.png" alt="">
 
-            <section id="sec-2">
-                    <div class="content2" >
-                        <h4 id="con2h41" data-aos="fade-left">
-                            PLIX is a the most beautiful skin for steam that modernizes the whole
-                            steam client.
-                        </h4>
-                            <h4 id="con2h42" data-aos="fade-right">
-                                A new look for the platform you already know and love.
-                                plix is fresh and exciting from the moment you open
-                                Steam.
-                            </h4>
-                        <div id="button5bg"></div>
-                            <button id="button5"></button>
-                     </div>
-            </section>
-
-
-            <section id="sec-3">
-                <div class="content3"   data-aos="fade-up">
-                    <span class="divider1"></span>
-                        <h2>HOW TO INSTALL</h2>
-                        <div class="steps">
-                            <ul>
-                                <li>
-                                    Navigate to steamui folder, it is usually located in "<strong>C:\Program Files (x86)\Steam\steamui</strong>"
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    In the google drive go to the web folder and choose light or dark 
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    Place the libraryrootcustom.css file in the steamui folder
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    In the google drive go to FONTS folder and install all the fonts there
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    Install                         
-                                    <a href="https://github.com/PhantomGamers/SFP" id="link1" target="_blank"
-                                      >https://github.com/PhantomGamers/SFP</a>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li>
-                                    Launch SFP and it will apply the library skin
-                                </li>
-                            </ul>
-                    </div>
-                </div>
-            </section>
-
-            <div id="footer">
-                <h4 class="copyright"></h4>
-                <button id="button4"><img src="./assets/resource/scrolltotop.png" alt=""></button>
-                <a id="button6" href="https://github.com/JJangless/Plix-theme" target="_blank"><img src="./assets/resource/github.png" alt=""></a>
+            <div id="clients" data-tilt>
+                <img id="lightclient" src="resource/light.png" alt="" />
+                <img id="darkclient" src="resource/dark.png" alt="" />
+            </div>
+            <div id="content1text">
+                <p id="content1text1">PLIX is a the most beautiful skin for steam that modernizes the whole steam
+                    client.</p>
+                <p id="content1text2">A new look for the platform you already know and love. plix is fresh
+                    andexciting from the moment you open Steam.</p>
             </div>
 
-            <script type="module" src="./assets/js/bgcanvas.js"></script>
-            <script type="module" src="./assets/js/fgcanvas.js"></script>
-            <script src="./assets/js/tilt.js"></script>
-            <script type ="module" src="./assets/js/mainjump.js"></script>
-            <script type="module" src=./assets/js/main.js></script>
-            <script src="./assets/js/aos.js"></script>
-            <script> AOS.init() </script>
+        </main>
+
+    </section>
+
+    <div class="button3wrapper">
+        <button id="button3"></button>
+    </div>
+    <section id="section2">
+        <main class="content2">
+            <div class="content2tittle">
+                <hr>
+                <span>HOW TO INSTALL</span>
+                <hr>
+            </div>
+
+            <ul>
+
+                <li>Navigate to steamui folder, it is usually located in "<strong>C:\Program Files
+                        (x86)\Steam\steamui</strong>"</li>
+                <li>In the google drive go to the web folder and choose light or dark</li>
+                <li>Place the libraryrootcustom.css file in the steamui folder</li>
+                <li>In the google drive go to FONTS folder and install all the fonts there</li>
+                <li>Install <a href="https://github.com/PhantomGamers/SFP" id="link1"
+                        target="_blank">https://github.com/PhantomGamers/SFP</a></li>
+                <li>Launch SFP and it will apply the library skin</li>
+            </ul>
+        </main>
+    </section>
+
+
+    <section id="section3">
+        <footer>
+            <p class="copyright">© JJANGLES</p>
+            <button id="button4">
+                <img src="resource/scrolltotop.png" alt="Icon">
+            </button>
+            <a id="button5" href="https://github.com/JJangless/Plix-theme" target="blank"><img src="resource/github.png"
+                    alt="Icon"></a>
+        </footer>
+
+    </section>
+    <canvas id="bgcanvas"></canvas>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/mainjump.js"></script>
+    <script type="module" src="js/tilt.js"></script>
+    <script type="module" src="js/bgcanvas.js"></script>
+    <script type="module" src="js/fgcanvas.js"></script>
 </body>
 </html>
