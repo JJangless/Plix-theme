@@ -850,6 +850,7 @@
         }
 
         #button5 {
+            /* background-color:var(--blue2); */
             border-radius: 50px;
             cursor: none;
             cursor: normal;
@@ -861,12 +862,13 @@
         }
 
         #button5 img {
-            border-radius: 8px;
-            width: 100%;
+            /* border-radius: 8px; */
+            width: 85%;
             height: auto;
             animation: imgbutton .1s ease-in-out;
         }
 
         #button5 img:hover {
-            animation: imgbuttonhover .1s ease-in-out forwards
+            animation: imgbuttonhover .1s ease-in-out forwards,
+                pulse 2s;
         }
