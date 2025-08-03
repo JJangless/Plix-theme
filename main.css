@@ -74,10 +74,11 @@
 
         @keyframes blobscaleup {
             0% {
-                TRANSFORM: scale(0.2);
+                TRANSFORM: scale(0);
             }
 
             50% {
+            
                 TRANSFORM: scale(1.05);
             }
 
@@ -594,13 +595,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            transform: scale(0);
         }
 
+        
         .content1 video {
             pointer-events: none;
             width: 90%;
-            opacity: 0;
         }
 
         .blobanimate {}
@@ -834,8 +834,8 @@
             justify-content: center;
             width: 66px;
             height: 42px;
-            padding:16px;
-            border-radius:8px;
+            padding: 16px;
+            border-radius: 8px;
         }
 
         #button4 img {
