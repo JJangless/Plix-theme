@@ -23,17 +23,17 @@ const blobcon = document.getElementById('blobcontainer');
 
 
 window.addEventListener("load", function () {
-    loader.style.animation = "fadeout .2s forwards ease-in-out";
+    loader.style.display = "none";
     clientscontainer.style.animation = "clientsappear 2s forwards, levitate 1.1s 1s infinite alternate forwards ease-in-out"
     blobcon.style.animation = "blobscaleup 2.5s 1.5s forwards";
     blob.style.animation = "blobappear 0.5s 1.5s forwards";
     fgcanvas.style.animation = "showcanvas 2s forwards ease-in-out";
 })
 
-// blobcon.addEventListener('animationend', (event) => {
-//     console.log('Animation finished for:', event.target);
-//     bloby.play();
-// });
+blobcon.addEventListener('animationend', (event) => {
+    console.log('Animation finished for:', event.target);
+    bloby.play();
+});
 
 
 
