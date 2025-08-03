@@ -4,7 +4,7 @@ import { OrbitControls } from './OrbitControls.js';
 var scene = new THREE.Scene();
 
 var loader = new THREE.TextureLoader;
-const mydot= loader.load('resource/dot.png')
+const mydot= loader.load('PLIX/resource/dot.png')
 
 var camera = new THREE.PerspectiveCamera(75, innerWidth / innerHeight , 1.5, 1000);	
 var renderer = new THREE.WebGLRenderer({

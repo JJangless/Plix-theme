@@ -87,11 +87,11 @@ document.addEventListener('mouseup', e => {
 
 
 link1.addEventListener('mouseover', () => {
-    document.getElementById("cursor").src = "resource/link.png";
+    document.getElementById("cursor").src = "PLIX/resource/link.png";
 })
 
 link1.addEventListener('mouseleave', () => {
-    document.getElementById("cursor").src = "resource/cursor.png";
+    document.getElementById("cursor").src = "PLIX/resource/cursor.png";
 })
 
 document.querySelector('.copyright').innerHTML = "©" + " " + copyrightyear + " " + "GeoffreyCreations"
@@ -101,7 +101,7 @@ lightclient.addEventListener('mouseover', () => {
     state.lighthover = true;
     char1.style.animation = "char1moveleft 2s forwards"
     // char1.play()
-    // faviconimage.href = "resource/favicon2.png"
+    // faviconimage.href = "PLIX/resource/favicon2.png"
     content1text1.style.backgroundColor = "var(--offwhite)"
     content1text1.style.color = "var(--gray)"
     content1text2.style.backgroundColor = "var(--offwhite)"
@@ -112,7 +112,7 @@ lightclient.addEventListener('mouseover', () => {
     sitename.style.color = "var(--gray)"
     button1.style.color = "var(--blue6)"
     button2.style.color = "var(--gray)"
-    logo.src = "resource/logo2.png"
+    logo.src = "PLIX/resource/logo2.png"
     blobcon.style.filter = "grayscale(100%)"
     document.body.style.animation = "lettherebelight .4s forwards"
     terrainmat.color = new THREE.Color(0xe4e4e4)
@@ -130,7 +130,7 @@ lightclient.addEventListener('mouseleave', () => {
     char1.currentTime = 0;
     char2.style.animationName = ""
     char2.currentTime = 0;
-    // faviconimage.href = "resource/favicon1.png"
+    // faviconimage.href = "PLIX/resource/favicon1.png"
     content1text1.style.backgroundColor = "var(--black1)"
     content1text1.style.color = "var(--white)"
     content1text2.style.backgroundColor = "var(--black1)"
@@ -141,7 +141,7 @@ lightclient.addEventListener('mouseleave', () => {
     sitename.style.color = "var(--white)"
     button1.style.color = "var(--blue2)"
     button2.style.color = "var(--white)"
-    logo.src = "resource/logo1.png"
+    logo.src = "PLIX/resource/logo1.png"
     blobcon.style.filter = "unset"
     document.body.style.animation = "lettherebedarkness .4s forwards"
     dotmat.color = new THREE.Color(0x1d1d1d)
