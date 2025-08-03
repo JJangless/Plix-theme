@@ -1,1 +1,1 @@
-![foo](/resource/plix.png)
+![foo](/PLIX/resource/plix.png)
