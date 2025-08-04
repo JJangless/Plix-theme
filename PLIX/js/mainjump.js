@@ -26,17 +26,19 @@ button4.addEventListener('click', () => {
 
 
 
-// window.onscroll = () => {
-//     if (!scrollTrackingEnabled) return; 
-//     if (window.scrollY == "0") {
-//         blob.classList.remove("blobanimatetrigger");
-//         void blob.offsetWidth;
-//         blob.classList.add("blobanimatetrigger");
-//         blob.addEventListener('animationend', (event) => {
-//             scrollTrackingEnabled = false;
-//         });
-//     }
-// };
+window.onscroll = () => {
+    if (!scrollTrackingEnabled) return; 
+    if (window.scrollY == "0") {
+        blob.pause();
+        blob.classList.remove("blobanimatetrigger");
+        void blob.offsetWidth;
+        blob.classList.add("blobanimatetrigger");
+        blob.addEventListener('animationend', (event) => {
+            scrollTrackingEnabled = false;
+            blob.play();
+        });
+    }
+};
 
 function showmodal() {
     document.body.style.overflow = "hidden";
