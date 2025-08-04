@@ -471,14 +471,16 @@
             cursor: none;
             background: none;
             border: none;
+            width: 80px;
+            height: 80px;
             padding: 0;
             border-radius: 50px;
             box-shadow: 5px 4px 20px #0000009a;
         }
 
         .modal-buttons img {
-            width: 80px;
-            height: 80px;
+            width: 100%;
+            height: auto;
             object-fit: contain;
             animation: imgbutton .1s ease-in-out;
         }
@@ -863,8 +865,8 @@
         }
 
         #button5 svg {
-            width:34px;
-            fill:var(--blue2);
+            width: 34px;
+            fill: var(--blue2);
             height: auto;
 
         }
