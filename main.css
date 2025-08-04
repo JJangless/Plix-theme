@@ -3,7 +3,7 @@
             --blue2: #22D7FE;
             --blue3: #003642;
             --blue4: #71e5ff;
-            --blue5: #0a3bea;
+            --blue5: #0939ea;
             --blue6: #1181d2;
             --offwhite: #e4e4e4;
             --gray: #585858;
@@ -78,7 +78,7 @@
             }
 
             50% {
-            
+
                 TRANSFORM: scale(1.05);
             }
 
@@ -597,7 +597,7 @@
             align-items: center;
         }
 
-        
+
         .content1 video {
             pointer-events: none;
             width: 90%;
@@ -832,19 +832,20 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 66px;
-            height: 42px;
-            padding: 16px;
+            width: 76px;
+            height: 46px;
             border-radius: 8px;
-        }
-
-        #button4 img {
-            width: 90%;
-            height: auto;
             animation: imgbutton .1s ease-in-out;
         }
 
-        #button4:hover img {
+        #button4 svg {
+            fill: var(--blue2);
+            width: 40px;
+            height: auto;
+
+        }
+
+        #button4:hover {
             animation: imgbuttonhover .1s ease-in-out forwards,
                 pulse 2s;
         }
@@ -856,17 +857,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 34px;
-            height: 34px;
-        }
-
-        #button5 img {
-            width: 85%;
-            height: auto;
+            width: 42px;
+            height: 42px;
             animation: imgbutton .1s ease-in-out;
         }
 
-        #button5 img:hover {
+        #button5 svg {
+            width:34px;
+            fill:var(--blue2);
+            height: auto;
+
+        }
+
+        #button5:hover {
             animation: imgbuttonhover .1s ease-in-out forwards,
                 pulse 2s;
         }
