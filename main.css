@@ -736,7 +736,7 @@
             pointer-events: none;
             user-select: none;
             position: absolute;
-            bottom: -18px;
+            bottom: -20px;
             height: 50px;
             min-width: 28px;
             border: 2px solid var(--button3border);
