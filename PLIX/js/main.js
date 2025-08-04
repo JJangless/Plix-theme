@@ -100,7 +100,7 @@ lightclient.addEventListener('mouseover', () => {
     state.lighthover = true;
     char1.style.animation = "char1moveleft 2s forwards"
     // char1.play()
-    // faviconimage.href = "./PLIX/resource/favicon2.png"
+    faviconimage.href = "PLIX/resource/ficon2.png";
     content1text1.style.backgroundColor = "var(--offwhite)"
     content1text1.style.color = "var(--gray)"
     content1text2.style.backgroundColor = "var(--offwhite)"
@@ -123,13 +123,22 @@ lightclient.addEventListener('mouseover', () => {
 
 })
 
+
+let faviconimage = document.querySelector("link[rel*='icon']");
+
+if (!faviconimage) {
+  faviconimage = document.createElement("link");
+  faviconimage.rel = "icon";
+  document.head.appendChild(faviconimage);
+}
+
 lightclient.addEventListener('mouseleave', () => {
     state.lighthover = false;
     char1.style.animationName = ""
     char1.currentTime = 0;
     char2.style.animationName = ""
     char2.currentTime = 0;
-    // faviconimage.href = "./PLIX/resource/favicon1.png"
+    faviconimage.href = "PLIX/resource/ficon1.png";
     content1text1.style.backgroundColor = "var(--black1)"
     content1text1.style.color = "var(--white)"
     content1text2.style.backgroundColor = "var(--black1)"
