@@ -725,6 +725,7 @@
             border: none;
             background: transparent;
             padding: 0;
+            transition: background-color 0.3s ease;
         }
 
         #button3:hover {
@@ -800,6 +801,7 @@
             cursor: none!important;
             color: var(--blue2);
             text-decoration: none;
+            transition: color 0.3s ease;
         }   
 
         a:hover,
