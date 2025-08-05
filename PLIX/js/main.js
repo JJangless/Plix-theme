@@ -43,7 +43,6 @@ document.body.addEventListener("wheel", e => {
 
 function func1(e) {
     if (e.pageX > sboffset) {
-        console.log("The cursor changed to the default");
         customcursor.style.opacity = "0"
         document.body.style.cursor = "inherit"
     }

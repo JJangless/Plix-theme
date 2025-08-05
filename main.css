@@ -426,16 +426,18 @@
             width: 57px;
             color: var(--white);
             position: absolute;
+            display:flex;
+            justify-content:center;
+            align-items:center;
             top: 0;
             right: 0;
             padding: 20px;
             border-top-right-radius: 10px;
         }
 
-        #modalclose img {
+        #modalclose svg {
             pointer-events: none;
-            width: 100%;
-            height: auto;
+            fill:var(--white);
         }
 
         #modalclose:hover {
