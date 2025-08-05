@@ -99,7 +99,7 @@ document.querySelector('.copyright').innerHTML = "©" + " " + copyrightyear + " 
 lightclient.addEventListener('mouseover', () => {
     state.lighthover = true;
     char1.style.animation = "char1moveleft 2s forwards"
-    // char1.play()
+    char1.play();
     faviconimage.href = "PLIX/resource/ficon2.png";
     content1text1.style.backgroundColor = "var(--offwhite)"
     content1text1.style.color = "var(--gray)"
@@ -159,7 +159,7 @@ lightclient.addEventListener('mouseleave', () => {
 
 darkclient.addEventListener('mouseover', () => {
     char2.style.animation = "char2moveright 2s forwards"
-    // char2.play()
+    char2.play()
     dotmat.color = new THREE.Color(0x585858)
     dark.style.animation = "darkclienthover .4s forwards"
     light.style.zIndex = "7"
@@ -171,7 +171,7 @@ darkclient.addEventListener('mouseleave', () => {
     char2.style.animationName = ""
     char2.currentTime = 0;
     char1.style.animationName = ""
-    // char1.currentTime = 0;
+    char1.currentTime = 0;
     dotmat.color = new THREE.Color(0x1d1d1d)
     dark.style.animation = "darkclient .4s forwards"
 })

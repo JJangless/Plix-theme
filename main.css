@@ -133,7 +133,7 @@
 
             50% {
                 opacity: 1;
-                transform: translatex(-100px) rotatez(-30deg)
+                transform: translatex(-80px) rotatez(-30deg)
             }
 
             95% {
@@ -154,7 +154,7 @@
 
             50% {
                 opacity: 1;
-                transform: translatex(110px) rotatez(30deg)
+                transform: translatex(90px) rotatez(30deg)
             }
 
             95% {
