@@ -354,7 +354,18 @@
             width: 36px;
         }
 
-        #preloader {
+        #progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            width: 0%;
+            background-color: var(--blue2);
+            z-index: 9999;
+            transition: width 0.3s ease;
+        }
+
+         #preloader {
             z-index: 9998;
             pointer-events: none;
             display: flex;
@@ -419,16 +430,16 @@
         }
 
         #modalclose {
-            cursor: none!important;
+            cursor: none !important;
             border: none;
             background: transparent;
             height: 57px;
             width: 57px;
             color: var(--white);
             position: absolute;
-            display:flex;
-            justify-content:center;
-            align-items:center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             top: 0;
             right: 0;
             padding: 20px;
@@ -437,7 +448,7 @@
 
         #modalclose svg {
             pointer-events: none;
-            fill:var(--white);
+            fill: var(--white);
         }
 
         #modalclose:hover {
@@ -469,7 +480,7 @@
         }
 
         .modal-buttons a {
-            cursor: none!important;
+            cursor: none !important;
             background: none;
             border: none;
             width: 80px;
@@ -535,12 +546,12 @@
         }
 
         #button1 {
-            cursor: none!important;
+            cursor: none !important;
             color: var(--blue2);
         }
 
         #button2 {
-            cursor: none!important;
+            cursor: none !important;
             word-spacing: 2px;
             color: var(--white);
         }
@@ -720,7 +731,7 @@
         }
 
         #button3 {
-            cursor: none!important;
+            cursor: none !important;
             width: 42px;
             height: 68px;
             border-radius: 50px;
@@ -800,11 +811,11 @@
         }
 
         a {
-            cursor: none!important;
+            cursor: none !important;
             color: var(--blue2);
             text-decoration: none;
             transition: color 0.3s ease;
-        }   
+        }
 
         a:hover,
         a:visited:hover {
@@ -836,7 +847,7 @@
         }
 
         #button4 {
-            cursor: none!important;
+            cursor: none !important;
             width: 76px;
             height: 46px;
             border-radius: 8px;
@@ -844,7 +855,7 @@
         }
 
         #button4 svg {
-            cursor: none!important;
+            cursor: none !important;
             fill: var(--blue2);
             width: 40px;
             height: auto;
@@ -857,21 +868,21 @@
         }
 
         #button5 {
-            cursor:none!important;
+            cursor: none !important;
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 0;
             width: 42px;
             height: 46px;
-            border: none;   
+            border: none;
             cursor: pointer;
             border-radius: 8px;
         }
 
         #button5 svg {
             pointer-events: none;
-            cursor:none!important;
+            cursor: none !important;
             fill: var(--blue2);
             width: 34px;
             height: 34px;

@@ -12,6 +12,12 @@
 </head>
 
 <body>
+    <div id="progress-bar"></div>
+    <style>
+        body {
+            overflow-y: hidden;
+        }
+    </style>
     <img id="cursor" src="PLIX/resource/cursor.png" alt="">
     <div id="preloader">
         <img src="PLIX/resource/logo1.png" alt="">
@@ -144,6 +150,26 @@
         </footer>
 
     </section>
+
+    <script>
+        document.onreadystatechange = () => {
+            const progressBar = document.getElementById('progress-bar');
+
+            if (document.readyState === 'interactive') {
+                progressBar.style.width = '50%';
+            }
+
+            if (document.readyState === 'complete') {
+                progressBar.style.width = '100%';
+
+                setTimeout(() => {
+                    progressBar.style.transition = 'opacity 0.5s';
+                    progressBar.style.opacity = 0;
+                }, 300);
+            }
+        };
+    </script>
+
     <canvas id="bgcanvas"></canvas>
     <script type="module" src="PLIX/js/main.js"></script>
     <script type="module" src="PLIX/js/mainjump.js"></script>
