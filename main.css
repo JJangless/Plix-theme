@@ -832,7 +832,7 @@
             align-items: center;
             justify-content: space-between;
             padding: 0 20px;
-            color: var(--blue2);
+            color: var(--white);
             font-size: 0.9rem;
         }
 
@@ -856,7 +856,7 @@
 
         #button4 svg {
             cursor: none !important;
-            fill: var(--blue2);
+            fill: rgb(202, 202, 202);
             width: 40px;
             height: auto;
 
@@ -883,7 +883,7 @@
         #button5 svg {
             pointer-events: none;
             cursor: none !important;
-            fill: var(--blue2);
+            fill: rgb(202, 202, 202);
             width: 34px;
             height: 34px;
         }

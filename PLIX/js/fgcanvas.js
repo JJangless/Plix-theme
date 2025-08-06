@@ -47,7 +47,6 @@ renderer.setSize(innerWidth, innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
 document.body.appendChild(renderer.domElement);
 
-var grid = new THREE.GridHelper(100, 10);
 var wave = 0;
 const controls = new OrbitControls(camera,fgcanvas);
 
@@ -68,14 +67,12 @@ const light1 = new THREE.PointLight (0xffffff, 5)
 
 const wireframe = new THREE.WireframeGeometry( planegeo )
 const terrain = new THREE.Mesh(planegeo,terrainmat,)
-export const linemat = new THREE.LineBasicMaterial({
-	color:0xffffff
-})
 export const dotmat = new THREE.PointsMaterial({
 	map:mydot,
 	transparent:true,
 	size: 0.3,
-	color:0x1d1d1d
+	// color:0x1d1d1d
+	color:0xf6738a
 })
 const line = new THREE.Points(planegeo,dotmat)
 
