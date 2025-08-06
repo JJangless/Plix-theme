@@ -32,7 +32,6 @@ window.addEventListener("load", function () {
 })
 
 blobcon.addEventListener('animationend', (event) => {
-    console.log('Animation finished for:', event.target);
     blob.play();
 });
 
