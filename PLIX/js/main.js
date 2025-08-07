@@ -127,9 +127,9 @@ lightclient.addEventListener('mouseover', () => {
 let faviconimage = document.querySelector("link[rel*='icon']");
 
 if (!faviconimage) {
-  faviconimage = document.createElement("link");
-  faviconimage.rel = "icon";
-  document.head.appendChild(faviconimage);
+    faviconimage = document.createElement("link");
+    faviconimage.rel = "icon";
+    document.head.appendChild(faviconimage);
 }
 
 lightclient.addEventListener('mouseleave', () => {

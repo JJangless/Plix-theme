@@ -27,7 +27,7 @@ button4.addEventListener('click', () => {
 
 
 window.onscroll = () => {
-    if (!scrollTrackingEnabled) return; 
+    if (!scrollTrackingEnabled) return;
     if (window.scrollY == "0") {
         blob.pause();
         blob.classList.remove("blobanimatetrigger");
@@ -45,7 +45,7 @@ function showmodal() {
     modal.style.display = "flex";
     modalcon.style.opacity = 0;
     modalcon.style.transform = "scale(0.8)";
-    modalcon.style.transition = "none"; 
+    modalcon.style.transition = "none";
     void modalcon.offsetHeight;
     modalcon.style.transition = "all 0.22s ease";
     modalcon.style.opacity = 1;

@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <title>Plix theme</title>
+
 </head>
 
 <body>
@@ -63,7 +65,7 @@
         </div>
     </div>
 
-    <header>
+    <header data-aos="fade-down" data-aos-delay="2450">
         <div class="logo-container">
             <img id="logo" src="PLIX/resource/logo1.png" alt="Logo">
             <span id="logo-text">PLIX</span>
@@ -88,7 +90,7 @@
                 <img id="lightclient" src="PLIX/resource/light.png" alt="" />
                 <img id="darkclient" src="PLIX/resource/dark.png" alt="" />
             </div>
-            <div id="content1text">
+            <div id="content1text" data-aos="fade" data-aos-delay="2450">
                 <p id="content1text1">PLIX is a the most beautiful skin for steam that modernizes the whole steam
                     client.</p>
                 <p id="content1text2">A new look for the platform you already know and love. PLIX is fresh
@@ -100,28 +102,30 @@
     </section>
 
     <div class="button3wrapper">
-        <button id="button3"></button>
+        <button style="opacity:0" id="button3"></button>
     </div>
     <section id="section2">
-        <main class="content2">
-            <div class="content2tittle">
-                <hr>
-                <span>HOW TO INSTALL</span>
-                <hr>
-            </div>
+        <div class="content2container">
+            <main class="content2" data-aos="fade-up">
+                <div class="content2tittle">
+                    <hr>
+                    <span>HOW TO INSTALL</span>
+                    <hr>
+                </div>
 
-            <ul>
+                <ul>
 
-                <li>Navigate to steamui folder, it is usually located in "<strong>C:\Program Files
-                        (x86)\Steam\steamui</strong>"</li>
-                <li>In the google drive go to the web folder and choose light or dark</li>
-                <li>Place the libraryrootcustom.css file in the steamui folder</li>
-                <li>In the google drive go to FONTS folder and install all the fonts there</li>
-                <li>Install <a href="https://github.com/PhantomGamers/SFP" id="link1"
-                        target="_blank">https://github.com/PhantomGamers/SFP</a></li>
-                <li>Launch SFP and it will apply the library skin</li>
-            </ul>
-        </main>
+                    <li>Navigate to steamui folder, it is usually located in "<strong>C:\Program Files
+                            (x86)\Steam\steamui</strong>"</li>
+                    <li>In the google drive go to the web folder and choose light or dark</li>
+                    <li>Place the libraryrootcustom.css file in the steamui folder</li>
+                    <li>In the google drive go to FONTS folder and install all the fonts there</li>
+                    <li>Install <a href="https://github.com/PhantomGamers/SFP" id="link1"
+                            target="_blank">https://github.com/PhantomGamers/SFP</a></li>
+                    <li>Launch SFP and it will apply the library skin</li>
+                </ul>
+            </main>
+        </div>
     </section>
 
 
@@ -168,6 +172,11 @@
                 }, 300);
             }
         };
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 
     <canvas id="bgcanvas"></canvas>

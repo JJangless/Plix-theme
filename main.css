@@ -88,7 +88,7 @@
         }
 
 
-        @keyframes blobappear {
+        @keyframes button3appear {
             from {
                 opacity: 0;
             }
@@ -365,7 +365,7 @@
             transition: width 0.3s ease;
         }
 
-         #preloader {
+        #preloader {
             z-index: 9998;
             pointer-events: none;
             display: flex;
@@ -739,6 +739,8 @@
             background: transparent;
             padding: 0;
             transition: background-color 0.3s ease;
+            animation: button3appear .8s forwards;
+            animation-delay: 2.45s;
         }
 
         #button3:hover {
@@ -773,21 +775,33 @@
             animation: scroll 2s alternate infinite ease-in-out;
         }
 
-        .content2 {
+        .content2container {
             z-index: 8;
-            height: 90vh;
-            flex: 1;
+            /* background: blue; */
+            /* margin-top:50px; */
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            position: relative;
+            height: 90vh;
+        }
+
+        .content2 {
+            /* background: red; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width:50%;
+            flex:auto 0 0;
         }
 
         .content2tittle {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 56%;
+            width: 100%;
             gap: 40px;
             margin: 50px 0;
         }
@@ -851,7 +865,7 @@
             width: 76px;
             height: 46px;
             border-radius: 8px;
-            animation: imgbutton .1s ease-in-out;
+            transition: fill 1s ease-in-out forwards, fill 1s ease-in-out forwards
         }
 
         #button4 svg {
@@ -862,9 +876,10 @@
 
         }
 
-        #button4:hover {
-            animation: imgbuttonhover .1s ease-in-out forwards,
-                pulse 2s;
+        #button4:hover svg {
+            transform: scale(1.1);
+            fill: var(--white);
+
         }
 
         #button5 {
@@ -878,6 +893,7 @@
             border: none;
             cursor: pointer;
             border-radius: 8px;
+            transition: fill 1s ease-in-out forwards, fill 1s ease-in-out forwards
         }
 
         #button5 svg {
@@ -888,7 +904,7 @@
             height: 34px;
         }
 
-        #button5:hover {
-            animation: imgbuttonhover .1s ease-in-out forwards,
-                pulse 2s;
+        #button5:hover svg {
+            transform: scale(1.1);
+            fill: var(--white);
         }
