@@ -299,16 +299,11 @@
         }
 
         @keyframes showcanvas {
-            0% {
-                opacity: 0;
+            from {
+                opacity: 0
             }
-
-            50% {
-                opacity: 100%;
-            }
-
-            100% {
-                opacity: 85%;
+            to {
+                   opacity: 1
             }
         }
 
@@ -567,7 +562,6 @@
 
         #fgcanvas {
             z-index: 2;
-            opacity: 1;
             pointer-events: none;
             position: absolute;
             transform: translateX(-50%);

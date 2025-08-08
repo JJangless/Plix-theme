@@ -16,7 +16,7 @@ var renderer = new THREE.WebGLRenderer({
 let t1 = 0;
 let t2 = 0;
 
-const startcolor = new THREE.Color(0x141414)
+const startcolor = new THREE.Color(0x4c4c4c)
 const endcolor = new THREE.Color(0x585858)
 
 
@@ -71,7 +71,7 @@ export const dotmat = new THREE.PointsMaterial({
 	map: mydot,
 	transparent: true,
 	size: 0.3,
-	color: 0x1d1d1d
+	color: 0x4c4c4c
 })
 const line = new THREE.Points(planegeo, dotmat)
 
