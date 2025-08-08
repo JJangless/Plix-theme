@@ -357,7 +357,7 @@
             width: 0%;
             background-color: var(--blue2);
             z-index: 9999;
-            transition: width 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         #preloader {
@@ -439,6 +439,7 @@
             right: 0;
             padding: 20px;
             border-top-right-radius: 10px;
+            transition: all .2s ease-in-out;
         }
 
         #modalclose svg {
@@ -447,7 +448,6 @@
         }
 
         #modalclose:hover {
-            transition: all .2s ease-in-out;
             background-color: var(--red);
         }
 
@@ -537,7 +537,7 @@
             padding: 10px 15px;
             border-radius: 50px;
             font-size: .92rem;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         #button1 {
@@ -732,7 +732,7 @@
             border: none;
             background: transparent;
             padding: 0;
-            transition: background-color 0.3s ease;
+            transition: all 0.3s ease-in-out;
             animation: button3appear .8s forwards;
             animation-delay: 2.45s;
         }
@@ -860,7 +860,7 @@
             width: 76px;
             height: 46px;
             border-radius: 8px;
-            transition: fill 1s ease-in-out forwards, fill 1s ease-in-out forwards
+            
         }
 
         #button4 svg {
@@ -868,6 +868,7 @@
             fill: rgb(202, 202, 202);
             width: 40px;
             height: auto;
+            transition: all .3s ease-in-out forwards;
 
         }
 
@@ -888,7 +889,7 @@
             border: none;
             cursor: pointer;
             border-radius: 8px;
-            transition: fill 1s ease-in-out forwards, fill 1s ease-in-out forwards
+            transition: all .3s ease-in-out forwards;
         }
 
         #button5 svg {
