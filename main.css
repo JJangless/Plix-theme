@@ -9,7 +9,7 @@
             --gray: #585858;
             --black1: #000000;
             --black2: #1f1f1f;
-            --black3: #111111;
+            --black3: #050505;
             --button3border: #fff;
             --button3bg: #000;
             --button3circle: #fff;
@@ -777,8 +777,6 @@
 
         .content2container {
             z-index: 8;
-            /* background: blue; */
-            /* margin-top:50px; */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -788,7 +786,6 @@
         }
 
         .content2 {
-            /* background: red; */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -862,6 +859,10 @@
 
         #button4 {
             cursor: none !important;
+            position:absolute;
+            bottom:0;
+            left:50%;
+            transform:translateX(-50%);
             width: 76px;
             height: 46px;
             border-radius: 8px;
