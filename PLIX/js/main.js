@@ -107,9 +107,9 @@ lightclient.addEventListener('mouseover', () => {
     content1text1.style.color = "var(--gray)"
     content1text2.style.backgroundColor = "var(--offwhite)"
     content1text2.style.color = "var(--gray)"
-    button3.style.setProperty('--button3border', 'dimgray')
-    button3.style.setProperty('--button3bg', 'white')
-    button3.style.setProperty('--button3circle', 'dimgray')
+    button3.style.setProperty('--button3border', 'var(--gray)')
+    button3.style.setProperty('--button3bg', 'var(--offwhite)')
+    button3.style.setProperty('--button3circle', 'var(--gray)')
     sitename.style.color = "var(--gray)"
     button1.style.color = "var(--blue6)"
     button2.style.color = "var(--gray)"
