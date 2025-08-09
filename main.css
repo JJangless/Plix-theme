@@ -314,7 +314,6 @@
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
@@ -395,20 +394,6 @@
             align-items: center;
         }
 
-
-        .modaltittle {
-            word-spacing: 4px;
-            display: flex;
-            align-items: center;
-        }
-
-        #emoji {
-            margin-top: 0;
-            margin-left: 18px;
-            width: 40px;
-            height: 40px;
-        }
-
         #modal-content {
             position: relative;
             display: flex;
@@ -454,11 +439,33 @@
 
         .modaltittle {
             margin: 20px 0;
+            word-spacing: 4px;
+            display: flex;
         }
 
         .modaltittle h1 {
             margin: 0;
             font-size: 2.7rem;
+        }
+
+
+        .modaltittle span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20px;
+        }
+
+        .modaltittle svg {
+            width: 2.7rem;
+            height: 2.7rem;
+
+        }
+
+        .modaltittle h1,
+        span {
+            display: inline;
+            margin: 0 auto 0 0;
         }
 
         #modal-content p {
@@ -571,18 +578,6 @@
             height: 100%;
             width: 100vw;
             max-width: 100%;
-        }
-
-        #bgcanvas {
-            z-index: 1;
-            opacity: 17%;
-            pointer-events: none;
-            position: fixed;
-            transform: translate(-50%, -50%);
-            top: 50%;
-            left: 50%;
-            height: 100vh;
-            width: 100vw;
         }
 
         .content1 {
