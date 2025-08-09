@@ -453,7 +453,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-left: 20px;
+            margin-left: 14px;
         }
 
         .modaltittle svg {
@@ -555,7 +555,7 @@
 
         #button2 {
             cursor: none !important;
-            word-spacing: 2px;
+            /* word-spacing: 2px; */
             color: var(--white);
         }
 
