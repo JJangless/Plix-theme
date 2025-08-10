@@ -8,7 +8,7 @@
             --offwhite: #e4e4e4;
             --gray: #585858;
             --black1: #000000;
-            --black2: #1f1f1f;
+            --black2: #0a0a0a;
             --black3: #050505;
             --button3border: #fff;
             --button3bg: #000;
@@ -321,10 +321,10 @@
         }
 
         body {
-            padding: 0;
-            margin: 0;
-            font-family: 'roboto', sans-serif;
             overflow-x: hidden;
+            margin: 0;
+            padding: 0;
+            font-family: 'roboto', sans-serif;
             background-color: var(--black1);
             color: var(--white);
             height: 100%;
@@ -606,19 +606,20 @@
             text-align: center;
         }
 
-        .blobcontainer {
-
+        #blobcontainer {
             z-index: 4;
+            width: 38%;
             position: absolute;
             display: flex;
             justify-content: center;
-            align-items: center;
         }
 
-
-        .content1 video {
-            pointer-events: none;
-            width: 90%;
+        #blob {
+            z-index: 4;
+            width: 100%;
+            max-width: 720px;
+            min-width: 320px;
+            height: auto;
         }
 
         .blobanimate {}
@@ -628,6 +629,7 @@
         }
 
         .clients-wrapper {
+            z-index: 7;
             position: absolute;
             display: flex;
             justify-content: center;
@@ -636,7 +638,6 @@
         }
 
         #clients {
-            z-index: 7;
             border-radius: 4px;
             width: 500px;
             height: 298px;
@@ -711,6 +712,7 @@
 
 
         #content1text {
+            z-index: 8;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -927,8 +929,19 @@
             fill: var(--white);
         }
 
+        @media (max-width: 1440px) {
+
+            #blobcontainer {
+                width: 50%;
+            }
+        }
+
         /* Tablet */
         @media (max-width: 1024px) {
+
+            #blobcontainer {
+                width: 56%;
+            }
 
             #char1 {
                 display: none;
@@ -944,6 +957,10 @@
 
             #fgcanvas {
                 display: none;
+            }
+
+            .clients-wrapper {
+                transform: scale(.8);
             }
 
             .content2 {
@@ -974,6 +991,10 @@
                 padding: 1.5rem;
             }
 
+             #blobcontainer {
+                width: 77%;
+            }
+
             .clients-wrapper {
                 transform: scale(0.85);
             }
@@ -999,28 +1020,12 @@
                 font-size: 1rem;
             }
 
-            footer {
-                flex-direction: row;
-            }
-
-            footer p {
-                order: 1;
-            }
-
-            .footerbuttons {
-                order: 2;
-                margin-left: auto;
-            }
-
-            #button4 {
-                position: static;
-                transform: none;
-            }
-
         }
 
         /* Very small devices */
         @media (max-width: 480px) {
+
+
 
             .modal-buttons {
                 gap: 38px;
@@ -1052,9 +1057,12 @@
                 animation: pulse 2s;
             }
 
+            #blobcontainer {
+                width: 20%;
+            }
+
             .clients-wrapper {
-                padding: 1rem;
-                transform: scale(0.6);
+                transform: scale(0.5);
             }
 
 
@@ -1064,6 +1072,18 @@
 
             #fgcanvas {
                 display: none;
+            }
+
+            .content1 {
+                height: 50vh;
+            }
+
+            .content1text p {
+                font-size: 0.875rem;
+            }
+
+            .content2 {
+                height: 50vh;
             }
 
             .content2tittle {
@@ -1077,6 +1097,7 @@
 
             .content2 ul {
                 font-size: 0.875rem;
+                line-height: 1.6rem;
             }
 
 
@@ -1091,6 +1112,30 @@
             #button5 svg {
                 width: 28px;
                 height: auto;
+            }
+
+            footer {
+                flex-direction: row;
+            }
+
+            footer p {
+                order: 1;
+            }
+
+            .footerbuttons {
+                order: 2;
+                margin-left: auto;
+            }
+
+            #button4 {
+                position: static;
+                transform: none;
+            }
+        }
+
+        @media (max-width: 375px) {
+            .content2tittle span {
+                font-size: 1.7rem;
             }
         }
 
