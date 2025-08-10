@@ -607,7 +607,7 @@
         }
 
         .blobcontainer {
-            
+
             z-index: 4;
             position: absolute;
             display: flex;
@@ -736,7 +736,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            z-index: 6;
             position: absolute;
             bottom: 8px;
             left: 50%;
@@ -800,7 +799,7 @@
         }
 
         .content2 {
-            
+
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -840,7 +839,7 @@
         }
 
         a {
-
+            cursor: none !important;
             color: var(--blue2);
             text-decoration: none;
             transition: color 0.3s ease;
