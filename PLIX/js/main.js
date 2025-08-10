@@ -3,7 +3,6 @@ import { dotmat, terrainmat } from './fgcanvas.js';
 import state from './state.js'
 
 const body = document.body;
-var sboffset = window.innerWidth - 22;
 const customcursor = document.getElementById('cursor');
 const loader = document.getElementById("preloader");
 const sitename = document.getElementById('logo-text');
@@ -38,69 +37,59 @@ blobcon.addEventListener('animationend', (event) => {
 });
 
 
+function updateCursorPosition(e) {
+    customcursor.style.top = (e.clientY + 18) + "px";
+    customcursor.style.left = (e.clientX + 16) + "px";
+}
+
+function func1(e) {
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    const isOverScrollbar = e.clientX >= window.innerWidth - scrollbarWidth;
+
+    if (isOverScrollbar) {
+        customcursor.style.opacity = "0";
+         document.body.style.cursor = "default"; 
+    } else {
+        customcursor.style.opacity = "1";
+        document.body.style.cursor = "none";
+        updateCursorPosition(e);
+    }
+}
+
+document.body.addEventListener('mouseleave', () => {
+    customcursor.style.opacity = "0";
+});
+
+document.addEventListener('mousemove', e => {
+    if (e.button === 1 || e.button === 2) {
+        document.removeEventListener('mousemove', func1);
+        customcursor.style.opacity = "0";
+        document.body.style.cursor = "inherit";
+    } else if (e.button === 0) {
+        document.addEventListener('mousemove', func1);
+        customcursor.style.opacity = "1";
+        document.body.style.cursor = "none";
+    }
+});
 
 document.body.addEventListener("wheel", e => {
-    customcursor.setAttribute("style", "top: " + (e.pageY + 18 - scrollY) + "px; left: " + (e.pageX + 16) + "px")
+    updateCursorPosition(e);
 });
 
 
-function func1(e) {
-    if (e.pageX > sboffset) {
-        customcursor.style.opacity = "0"
-        document.body.style.cursor = "inherit"
-    }
-    else {
-        customcursor.style.opacity = "100%"
-        document.body.style.cursor = "none"
-    }
+link1.addEventListener("mouseenter", () => {
+    customcursor.src = "PLIX/resource/link.png";
+});
+link1.addEventListener("mouseleave", () => {
+    customcursor.src = "PLIX/resource/cursor.png";
+});
 
-    customcursor.setAttribute("style", "top: " + (e.pageY + 18 - scrollY) + "px; left: " + (e.pageX + 16) + "px")
-}
-
-
-
-document.addEventListener('mousemove', func1);
-
-document.body.addEventListener('mouseleave', () => {
-    customcursor.style.opacity = "0"
-})
-
-
-document.addEventListener('mouseup', e => {
-    if (e.button == 1) {
-        document.removeEventListener('mousemove', func1);
-        customcursor.style.opacity = "0"
-        document.body.style.cursor = "inherit"
-    }
-    else if (e.button == 0) {
-        customcursor.setAttribute("style", "top: " + (e.pageY + 18 - scrollY) + "px; left: " + (e.pageX + 16) + "px")
-        document.addEventListener('mousemove', func1);
-        customcursor.style.opacity = "100%"
-        document.body.style.cursor = "none"
-
-    }
-    else if (e.button == 2) {
-        document.removeEventListener('mousemove', func1);
-        customcursor.style.opacity = "0"
-        document.body.style.cursor = "inherit"
-    }
-})
-
-
-link1.addEventListener('mouseover', () => {
-    document.getElementById("cursor").src = "PLIX/resource/link.png";
-})
-
-link1.addEventListener('mouseleave', () => {
-    document.getElementById("cursor").src = "PLIX/resource/cursor.png";
-})
 
 document.querySelector('.copyright').innerHTML = "©" + " " + copyrightyear + " " + "GeoffreyCreations"
 
 
 lightclient.addEventListener('mouseover', () => {
     state.lighthover = true;
-
     char1.style.animation = "char1moveleft 2s forwards"
     char1.play();
     faviconimage.href = "PLIX/resource/ficon2.png";
@@ -129,14 +118,12 @@ lightclient.addEventListener('mouseover', () => {
 char1.addEventListener('animationend', (event) => {
     char1.style.animationName = ""
     char1.currentTime = 0;
-
 });
 
 
 char2.addEventListener('animationend', (event) => {
     char2.style.animationName = ""
     char2.currentTime = 0;
-
 });
 
 
