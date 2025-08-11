@@ -20,8 +20,8 @@ const icon_in = document.getElementById('icon_in');
 const header = document.querySelector('header');
 const content1text1 = document.getElementById('content1text1');
 const content1text2 = document.getElementById('content1text2');
-const blobvid = document.getElementById('blobvideo');
-const blobpng = document.getElementById('blobpng');
+const blobwin = document.getElementById('blobwin');
+const blobios = document.getElementById('blobios');
 const blobcon = document.getElementById('blobcontainer');
 
 function updateCursorPosition(e) {
@@ -37,12 +37,12 @@ function isIOS() {
 
 if (isIOS()) {
   console.log("User is on iOS");
-  blobvid.style.display = "none";
-  blobpng.style.display = "flex";
+  blobwin.style.display = "none";
+  blobios.style.display = "flex";
 } else {
   console.log("User is NOT on iOS");
-  blobvid.style.display = "flex";
-  blobpng.style.display = "none";
+  blobwin.style.display = "flex";
+  blobios.style.display = "none";
 }
 
 
@@ -103,7 +103,7 @@ window.addEventListener("load", function () {
 })
 
 blobcon.addEventListener('animationend', (event) => {
-    blobvid.play();
+    blobwin.play();
 });
 
 
