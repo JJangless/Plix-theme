@@ -21,6 +21,38 @@ const content1text2 = document.getElementById('content1text2');
 const blob = document.getElementById('blob');
 const blobcon = document.getElementById('blobcontainer');
 
+function updateCursorPosition(e) {
+    customcursor.style.top = (e.clientY + 18) + "px";
+    customcursor.style.left = (e.clientX + 16) + "px";
+}
+
+
+document.addEventListener('mousemove', e => {
+    window.addEventListener('pointerdown', (e) => {
+        if (e.pointerType === 'mouse') {
+            console.log('User is using a mouse');
+            clientarrow.src = 'PLIX/resource/arrow.png';
+
+        } else if (e.pointerType === 'touch') {
+            console.log('User is using touch');
+            customcursor.style.opacity = "0";
+            document.body.style.cursor = "inherit";
+            clientarrow.src = 'PLIX/resource/link1.png';
+        }
+    });
+
+    if (e.button === 1 || e.button === 2) {
+        document.removeEventListener('mousemove', func1);
+        customcursor.style.opacity = "0";
+        document.body.style.cursor = "inherit";
+    } else if (e.button === 0) {
+        document.addEventListener('mousemove', func1);
+        customcursor.style.opacity = "1";
+        document.body.style.cursor = "none";
+    }
+});
+
+
 
 window.addEventListener("load", function () {
     loader.style.display = "none";
@@ -37,10 +69,7 @@ blobcon.addEventListener('animationend', (event) => {
 });
 
 
-function updateCursorPosition(e) {
-    customcursor.style.top = (e.clientY + 18) + "px";
-    customcursor.style.left = (e.clientX + 16) + "px";
-}
+
 
 function func1(e) {
     const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
@@ -48,7 +77,7 @@ function func1(e) {
 
     if (isOverScrollbar) {
         customcursor.style.opacity = "0";
-         document.body.style.cursor = "default"; 
+        document.body.style.cursor = "default";
     } else {
         customcursor.style.opacity = "1";
         document.body.style.cursor = "none";
@@ -60,17 +89,7 @@ document.body.addEventListener('mouseleave', () => {
     customcursor.style.opacity = "0";
 });
 
-document.addEventListener('mousemove', e => {
-    if (e.button === 1 || e.button === 2) {
-        document.removeEventListener('mousemove', func1);
-        customcursor.style.opacity = "0";
-        document.body.style.cursor = "inherit";
-    } else if (e.button === 0) {
-        document.addEventListener('mousemove', func1);
-        customcursor.style.opacity = "1";
-        document.body.style.cursor = "none";
-    }
-});
+
 
 document.body.addEventListener("wheel", e => {
     updateCursorPosition(e);
@@ -81,7 +100,7 @@ link1.addEventListener("mouseenter", () => {
     customcursor.src = "PLIX/resource/link.png";
 });
 link1.addEventListener("mouseleave", () => {
-    customcursor.src = "PLIX/resource/cursor.png";
+    customcursor.src = "PLIX/resource/arrow.png";
 });
 
 
