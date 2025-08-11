@@ -26,6 +26,23 @@ function updateCursorPosition(e) {
     customcursor.style.left = (e.clientX + 16) + "px";
 }
 
+function handleTilt() {
+    if (window.innerWidth <= 768) {
+        if (clientscontainer.vanillaTilt) {
+            clientscontainer.vanillaTilt.destroy();
+        }
+    } else {
+        if (!clientscontainer.vanillaTilt) {
+            VanillaTilt.init(clientscontainer, {
+                max: 25,
+                speed: 200,
+                glare: true,
+                "max-glare": 0.5
+            });
+        }
+    }
+}
+    handleTilt();
 
 document.addEventListener('mousemove', e => {
     window.addEventListener('pointerdown', (e) => {
@@ -51,7 +68,6 @@ document.addEventListener('mousemove', e => {
         document.body.style.cursor = "none";
     }
 });
-
 
 
 window.addEventListener("load", function () {

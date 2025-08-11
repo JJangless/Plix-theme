@@ -1145,4 +1145,8 @@
             .content2tittle span {
                 font-size: 1.4rem;
             }
+
+            .content1text p {
+                font-size:.875rem;
+            }
         }
