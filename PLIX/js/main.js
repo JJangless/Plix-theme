@@ -15,6 +15,8 @@ const clientarrow = document.getElementById("clientarrow");
 const copyrightyear = new Date().getFullYear();
 const fgcanvas = document.getElementById("fgcanvas");
 const logo = document.getElementById('logo');
+const icon_dl = document.getElementById('icon_dl');
+const icon_in = document.getElementById('icon_in');
 const header = document.querySelector('header');
 const content1text1 = document.getElementById('content1text1');
 const content1text2 = document.getElementById('content1text2');
@@ -35,14 +37,14 @@ function handleTilt() {
         if (!clientscontainer.vanillaTilt) {
             VanillaTilt.init(clientscontainer, {
                 max: 25,
-                speed: 200,
+                speed: 150,
                 glare: true,
                 "max-glare": 0.5
             });
         }
     }
 }
-    handleTilt();
+handleTilt();
 
 document.addEventListener('mousemove', e => {
     window.addEventListener('pointerdown', (e) => {
@@ -139,6 +141,8 @@ lightclient.addEventListener('mouseover', () => {
     button1.style.color = "var(--blue6)"
     button2.style.color = "var(--gray)"
     logo.src = "PLIX/resource/logo2.png"
+    icon_dl.src = "PLIX/resource/download2.png"
+    icon_in.src = "PLIX/resource/install2.png"
     blobcon.style.filter = "grayscale(100%)"
     document.body.style.animation = "lettherebelight .4s forwards"
     terrainmat.color = new THREE.Color(0xe4e4e4)
@@ -184,6 +188,8 @@ lightclient.addEventListener('mouseleave', () => {
     button1.style.color = "var(--blue2)"
     button2.style.color = "var(--white)"
     logo.src = "PLIX/resource/logo1.png"
+    icon_dl.src = "PLIX/resource/download1.png"
+    icon_in.src = "PLIX/resource/install1.png"
     blobcon.style.filter = "unset"
     document.body.style.animation = "lettherebedarkness .4s forwards"
     dotmat.color = new THREE.Color(0x1d1d1d)
