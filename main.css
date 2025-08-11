@@ -1023,12 +1023,6 @@
         /* Very small devices */
         @media (max-width: 480px) {
 
-
-
-            .modal-buttons {
-                /* gap: 38px; */
-            }
-
             .modal-buttons a {
                 width: 54px;
                 height: 54px;
@@ -1041,7 +1035,6 @@
 
             .header-buttons button {
                 border-radius: 10px;
-                /* padding: 10px; */
             }
 
             .header_btn_label {
@@ -1061,11 +1054,11 @@
             }
 
             #blobcontainer {
-                width: 70%;
+                width: 74%;
             }
 
             .clients-wrapper {
-                transform: scale(0.38);
+                transform: scale(0.41);
             }
 
 
@@ -1096,6 +1089,7 @@
             .content2tittle span {
                 white-space: normal;
                 text-align: center;
+                font-size: 1.7rem;
             }
 
             .content2 ul {

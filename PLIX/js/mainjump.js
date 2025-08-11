@@ -7,8 +7,8 @@ const button4 = document.getElementById('button4');
 const modalcon = document.getElementById('modal-content');
 const modal = document.getElementById('modal');
 const modalclosebutton = document.getElementById('modalclose');
-const blobvid = document.getElementById('blobvideo');
-const blobpng = document.getElementById('blobpng');
+const blobwin = document.getElementById('blobwin');
+const blobios = document.getElementById('blobios');
 
 let scrollTrackingEnabled = false;
 
@@ -30,13 +30,13 @@ button4.addEventListener('click', () => {
 window.onscroll = () => {
     if (!scrollTrackingEnabled) return;
     if (window.scrollY == "0") {
-        blob.pause();
-        blob.classList.remove("blobanimatetrigger");
-        void blob.offsetWidth;
-        blob.classList.add("blobanimatetrigger");
-        blob.addEventListener('animationend', (event) => {
+        blobwin.pause();
+        blobwin.classList.remove("blobanimatetrigger");
+        void blobwin.offsetWidth;
+        blobwin.classList.add("blobanimatetrigger");
+        blobwin.addEventListener('animationend', (event) => {
             scrollTrackingEnabled = false;
-            blob.play();
+            blobwin.play();
         });
     }
 };
