@@ -76,7 +76,7 @@ document.addEventListener('mousemove', e => {
             console.log('User is using touch');
             customcursor.style.opacity = "0";
             document.body.style.cursor = "inherit";
-            clientarrow.src = 'PLIX/resource/link1.png';
+            clientarrow.src = 'PLIX/resource/touch.png';
         }
     });
 
