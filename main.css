@@ -8,7 +8,7 @@
             --offwhite: #e4e4e4;
             --gray: #585858;
             --black1: #000000;
-            --black2: #0a0a0a;
+            --black2: #111111;
             --black3: #050505;
             --button3border: #fff;
             --button3bg: #000;
@@ -79,11 +79,11 @@
 
             50% {
 
-                TRANSFORM: scale(1.05);
+                TRANSFORM: scale(1.2);
             }
 
             100% {
-                TRANSFORM: scale(1);
+                TRANSFORM: scale(1.12);
             }
         }
 
@@ -608,7 +608,8 @@
 
         #blobcontainer {
             z-index: 4;
-            width: 38%;
+            width: 100%;
+            height:auto;
             position: absolute;
             display: flex;
             justify-content: center;
@@ -618,7 +619,7 @@
             z-index: 4;
             width: 100%;
             max-width: 720px;
-            min-width: 320px;
+            min-width: 270px;
             height: auto;
         }
 
@@ -1058,11 +1059,11 @@
             }
 
             #blobcontainer {
-                width: 20%;
+                width: 70%;
             }
 
             .clients-wrapper {
-                transform: scale(0.5);
+                transform: scale(0.4);
             }
 
 

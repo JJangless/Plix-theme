@@ -54,7 +54,7 @@ function showmodal() {
 }
 
 function hidemodal() {
-    document.body.style.overflow = "auto";
+    document.body.style.overflowY = "scroll";
     modal.style.display = "none";
 }
 
