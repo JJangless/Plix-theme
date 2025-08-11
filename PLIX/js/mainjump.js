@@ -7,7 +7,8 @@ const button4 = document.getElementById('button4');
 const modalcon = document.getElementById('modal-content');
 const modal = document.getElementById('modal');
 const modalclosebutton = document.getElementById('modalclose');
-const blob = document.getElementById('blob');
+const blobvid = document.getElementById('blobvideo');
+const blobpng = document.getElementById('blobpng');
 
 let scrollTrackingEnabled = false;
 

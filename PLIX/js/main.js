@@ -20,13 +20,33 @@ const icon_in = document.getElementById('icon_in');
 const header = document.querySelector('header');
 const content1text1 = document.getElementById('content1text1');
 const content1text2 = document.getElementById('content1text2');
-const blob = document.getElementById('blob');
+const blobvid = document.getElementById('blobvideo');
+const blobpng = document.getElementById('blobpng');
 const blobcon = document.getElementById('blobcontainer');
 
 function updateCursorPosition(e) {
     customcursor.style.top = (e.clientY + 18) + "px";
     customcursor.style.left = (e.clientX + 16) + "px";
 }
+
+
+
+function isIOS() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
+if (isIOS()) {
+  console.log("User is on iOS");
+  blobvid.style.display = "none";
+  blobpng.style.display = "flex";
+} else {
+  console.log("User is NOT on iOS");
+  blobvid.style.display = "flex";
+  blobpng.style.display = "none";
+}
+
+
+
 
 function handleTilt() {
     if (window.innerWidth <= 768) {
@@ -83,7 +103,7 @@ window.addEventListener("load", function () {
 })
 
 blobcon.addEventListener('animationend', (event) => {
-    blob.play();
+    blobvid.play();
 });
 
 
