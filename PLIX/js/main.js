@@ -6,8 +6,6 @@ const body = document.body;
 const customcursor = document.getElementById('cursor');
 const loader = document.getElementById("preloader");
 const sitename = document.getElementById('logo-text');
-const char1 = document.getElementById("char1");
-const char2 = document.getElementById("char2");
 const clientscontainer = document.getElementById("clients");
 const light = document.getElementById("lightclient");
 const dark = document.getElementById("darkclient");
@@ -20,9 +18,14 @@ const icon_in = document.getElementById('icon_in');
 const header = document.querySelector('header');
 const content1text1 = document.getElementById('content1text1');
 const content1text2 = document.getElementById('content1text2');
-const blobwin = document.getElementById('blobwin');
-const blobios = document.getElementById('blobios');
 const blobcon = document.getElementById('blobcontainer');
+const blobwin = document.getElementById('blobwin');
+const blobsaf = document.getElementById('blobsaf');
+const char1win = document.getElementById('char1win');
+const char2win = document.getElementById('char2win');
+const char1saf = document.getElementById('char1saf');
+const char2saf = document.getElementById('char2saf');
+
 
 function updateCursorPosition(e) {
     customcursor.style.top = (e.clientY + 18) + "px";
@@ -38,11 +41,19 @@ function isSafari() {
 if (isSafari()) {
     console.log("This is Safari!");
     blobwin.style.display = "none";
-    blobios.style.display = "flex";
+    char1saf.style.display = "block";
+    char2saf.style.display = "block";
+    char1win.style.display = "none";
+    char2win.style.display = "none";
+    blobsaf.style.display = "flex";
 } else {
     console.log("Not Safari.");
     blobwin.style.display = "flex";
-    blobios.style.display = "none";
+    char1saf.style.display = "none";
+    char2saf.style.display = "none";
+    char1win.style.display = "block";
+    char2win.style.display = "block";
+    blobsaf.style.display = "none";
 }
 
 
@@ -146,8 +157,9 @@ document.querySelector('.copyright').innerHTML = "©" + " " + copyrightyear + " 
 
 lightclient.addEventListener('mouseover', () => {
     state.lighthover = true;
-    char1.style.animation = "char1moveleft 2s forwards"
-    char1.play();
+    char1win.style.animation = "char1moveleft 2s forwards"
+    char1saf.style.animation = "char1moveleft 2s forwards"
+    char1win.play();
     faviconimage.href = "PLIX/resource/ficon2.png";
     content1text1.style.backgroundColor = "var(--offwhite)"
     content1text1.style.color = "var(--gray)"
@@ -173,15 +185,27 @@ lightclient.addEventListener('mouseover', () => {
 
 })
 
-char1.addEventListener('animationend', (event) => {
-    char1.style.animationName = ""
-    char1.currentTime = 0;
+char1win.addEventListener('animationend', (event) => {
+    char1win.style.animationName = ""
+    char1win.currentTime = 0;
 });
 
 
-char2.addEventListener('animationend', (event) => {
-    char2.style.animationName = ""
-    char2.currentTime = 0;
+char2win.addEventListener('animationend', (event) => {
+    char2win.style.animationName = ""
+    char2win.currentTime = 0;
+});
+
+
+char1saf.addEventListener('animationend', (event) => {
+    char1saf.style.animationName = ""
+    char1saf.currentTime = 0;
+});
+
+
+char2saf.addEventListener('animationend', (event) => {
+    char2saf.style.animationName = ""
+    char2saf.currentTime = 0;
 });
 
 
@@ -217,8 +241,9 @@ lightclient.addEventListener('mouseleave', () => {
 })
 
 darkclient.addEventListener('mouseover', () => {
-    char2.style.animation = "char2moveright 2s forwards"
-    char2.play()
+    char2win.style.animation = "char2moveright 2s forwards"
+    char2saf.style.animation = "char2moveright 2s forwards"
+    char2win.play()
     dotmat.color = new THREE.Color(0x585858)
     dark.style.animation = "darkclienthover .4s forwards"
     light.style.zIndex = "7"

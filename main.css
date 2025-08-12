@@ -620,7 +620,7 @@
         }
 
         #blobwin,
-        #blobios {
+        #blobsaf {
             z-index: 4;
             width: 100%;
             max-width: 720px;
@@ -628,7 +628,7 @@
             height: auto;
         }
 
-        #blobios {
+        #blobsaf {
             display: none;
         }
 
@@ -680,8 +680,7 @@
             clip-path: polygon(100% 0, 50% 0, 50% 100%, 100% 100%);
         }
 
-
-        #char1 {
+        #char1win,#char1saf {
             z-index: 5;
             transform: rotateY(180deg);
             opacity: 0;
@@ -690,7 +689,11 @@
             margin-left: -375px;
         }
 
-        #char2 {
+        #char1saf,#char2saf {
+            display:none;
+        }
+
+        #char2win,#char2saf {
             z-index: 5;
             transform: rotateY(180deg);
             opacity: 0;
@@ -955,13 +958,14 @@
                 width: 56%;
             }
 
-            #char1 {
+            /* #char1 {
                 display: none;
-            }
+            } */
 
-            #char2 {
+            /* #char2 {
+        
                 display: none;
-            }
+            } */
 
             #fgcanvas {
                 display: none;
