@@ -8,7 +8,7 @@ const modalcon = document.getElementById('modal-content');
 const modal = document.getElementById('modal');
 const modalclosebutton = document.getElementById('modalclose');
 const blobwin = document.getElementById('blobwin');
-const blobios = document.getElementById('blobios');
+const blobsaf = document.getElementById('blobsaf');
 
 let scrollTrackingEnabled = false;
 

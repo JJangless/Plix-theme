@@ -27,6 +27,7 @@ const char1saf = document.getElementById('char1saf');
 const char2saf = document.getElementById('char2saf');
 
 
+
 function updateCursorPosition(e) {
     customcursor.style.top = (e.clientY + 18) + "px";
     customcursor.style.left = (e.clientX + 16) + "px";
@@ -38,8 +39,8 @@ function isSafari() {
     return /^((?!chrome|android|crios|fxios|edg).)*safari/i.test(ua);
 }
 
+
 if (isSafari()) {
-    console.log("This is Safari!");
     blobwin.style.display = "none";
     char1saf.style.display = "block";
     char2saf.style.display = "block";
@@ -47,7 +48,6 @@ if (isSafari()) {
     char2win.style.display = "none";
     blobsaf.style.display = "flex";
 } else {
-    console.log("Not Safari.");
     blobwin.style.display = "flex";
     char1saf.style.display = "none";
     char2saf.style.display = "none";
@@ -55,8 +55,6 @@ if (isSafari()) {
     char2win.style.display = "block";
     blobsaf.style.display = "none";
 }
-
-
 
 function handleTilt() {
     if (window.innerWidth <= 768) {
@@ -79,11 +77,9 @@ handleTilt();
 document.addEventListener('mousemove', e => {
     window.addEventListener('pointerdown', (e) => {
         if (e.pointerType === 'mouse') {
-            console.log('User is using a mouse');
             clientarrow.src = 'PLIX/resource/arrow.png';
 
         } else if (e.pointerType === 'touch') {
-            console.log('User is using touch');
             customcursor.style.opacity = "0";
             document.body.style.cursor = "inherit";
             clientarrow.src = 'PLIX/resource/touch.png';
@@ -115,8 +111,6 @@ window.addEventListener("load", function () {
 blobcon.addEventListener('animationend', (event) => {
     blobwin.play();
 });
-
-
 
 
 function func1(e) {
