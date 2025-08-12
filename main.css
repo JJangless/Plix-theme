@@ -88,7 +88,7 @@
         }
 
 
-        @keyframes button3appear {
+        @keyframes content1appear {
             from {
                 opacity: 0;
             }
@@ -730,6 +730,8 @@
             bottom: 4%;
             width: 100%;
             text-align: center;
+            animation: content1appear .8s forwards;
+            animation-delay: 2.2s;
         }
 
         #content1text p {
@@ -763,7 +765,7 @@
             background: transparent;
             padding: 0;
             transition: all 0.3s ease-in-out;
-            animation: button3appear .8s forwards;
+            animation: content1appear .8s forwards;
             animation-delay: 2.45s;
         }
 
