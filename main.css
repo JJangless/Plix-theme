@@ -687,7 +687,6 @@
 
         #char1win,
         #char1saf {
-            border: 5px solid red;
             z-index: 5;
             transform: rotateY(180deg);
             opacity: 0;
@@ -699,7 +698,6 @@
 
         #char2win,
         #char2saf {
-            border: 5px solid red;
             z-index: 5;
             transform: rotateY(180deg);
             opacity: 0;
