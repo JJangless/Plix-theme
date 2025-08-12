@@ -440,14 +440,12 @@
 
         .modaltittle {
             margin: 20px 0;
-            word-spacing: 4px;
             display: flex;
         }
 
         .modaltittle h1 {
             margin: 0;
             font-size: 2rem;
-            font-size: clamp(1.5rem, 4vw, 2.5rem);
         }
 
         .modaltittle h1,
@@ -461,7 +459,6 @@
             line-height: 2em;
             width: 100%;
             max-width: 500px;
-            font-size: clamp(1rem, 2.5vw, 1.2rem);
         }
 
         .modal-buttons {
@@ -982,6 +979,7 @@
                 cursor: default !important;
             }
         }
+     
 
         /* Mobile */
         @media (max-width: 768px) {
@@ -1007,8 +1005,8 @@
             }
 
             #content1text p {
-                font-size: 1rem;
-                line-height: 1.4rem;
+                font-size: 1.1rem;
+                line-height: 1.7rem;
             }
 
             .content2 {
@@ -1023,6 +1021,10 @@
 
         /* Very small devices */
         @media (max-width: 480px) {
+
+            .modaltittle h1 {
+                font-size: 1.4rem;
+            }
 
             .modal-buttons a {
                 width: 54px;
@@ -1074,10 +1076,6 @@
 
             .content1 {
                 height: 50vh;
-            }
-
-            .content1text p {
-                font-size: 0.875rem;
             }
 
             .content2 {
@@ -1133,6 +1131,15 @@
         }
 
         @media (max-width: 375px) {
+
+            .modaltittle h1 {
+                font-size: 1.2rem;
+            }
+
+            #modal-content p {
+
+                font-size: .8rem;
+            }
 
             .modal-buttons a {
                 width: 52px;
