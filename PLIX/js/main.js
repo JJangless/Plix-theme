@@ -30,21 +30,20 @@ function updateCursorPosition(e) {
 }
 
 
-
-function isIOS() {
-  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+function isSafari() {
+    const ua = navigator.userAgent;
+    return /^((?!chrome|android|crios|fxios|edg).)*safari/i.test(ua);
 }
 
-if (isIOS()) {
-  console.log("User is on iOS");
-  blobwin.style.display = "none";
-  blobios.style.display = "flex";
+if (isSafari()) {
+    console.log("This is Safari!");
+    blobwin.style.display = "none";
+    blobios.style.display = "flex";
 } else {
-  console.log("User is NOT on iOS");
-  blobwin.style.display = "flex";
-  blobios.style.display = "none";
+    console.log("Not Safari.");
+    blobwin.style.display = "flex";
+    blobios.style.display = "none";
 }
-
 
 
 
