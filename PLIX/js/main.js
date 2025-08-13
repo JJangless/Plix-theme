@@ -29,8 +29,8 @@ const char2saf = document.getElementById('char2saf');
 
 
 function updateCursorPosition(e) {
-    customcursor.style.top = (e.clientY + 18) + "px";
-    customcursor.style.left = (e.clientX + 16) + "px";
+    customcursor.style.top = (e.clientY + 14) + "px";
+    customcursor.style.left = (e.clientX + 15) + "px";
 }
 
 
