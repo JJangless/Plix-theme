@@ -265,5 +265,6 @@ clientscontainer.addEventListener('mouseleave', () => {
     state.clienthover = false;
     document.body.style.overflow = "visible"
     document.body.style.overflowX = "hidden"
+    clientscontainer.style.animationPlayState = "running";
     clientarrow.style.animation = "arrowfadein .5s forwards ease-in-out"
 })
