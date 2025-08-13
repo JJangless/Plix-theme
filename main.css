@@ -232,13 +232,24 @@
             }
         }
 
-        @keyframes clientarrowop {
-            30% {
+        @keyframes arrowfadein {
+            from {
                 opacity: 0;
             }
 
-            100% {
+            to {
                 opacity: 1;
+            }
+        }
+
+
+        @keyframes arrowfadeout {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
             }
         }
 
@@ -635,7 +646,7 @@
             animation: pulse 2s;
         }
 
-        .clients-wrapper {
+        #clients-wrapper {
             z-index: 7;
             position: absolute;
             display: flex;
@@ -648,7 +659,7 @@
             border-radius: 4px;
             width: 500px;
             height: 298px;
-            max-width: 500px;
+            /* max-width: 500px; */
             opacity: 0;
             display: flex;
             align-items: center;
@@ -690,7 +701,7 @@
             position: absolute;
             width: 200px;
             left: -32px;
-            bottom: 35px;
+            bottom: 2px;
         }
 
         #char2win,
@@ -701,27 +712,27 @@
             position: absolute;
             width: 132px;
             right: 8px;
-            bottom: 35px;
+            bottom: 2px;
         }
 
 
-        #clientarrow {
+        #clientarrow-wrapper {
             z-index: 996;
             position: absolute;
-            left: 50%;
-            right: 50%;
-            width: 46px;
-            margin-left: 250px;
-            margin-top: 310px;
-            opacity: 0;
-            animation: clientarrowop 2s 2s forwards ease-in-out,
-                diagonal 2s infinite forwards ease-in-out;
-            -webkit-animation: clientarrowop 2s 2s forwards ease-in-out,
-                diagonal 2s infinite forwards ease-in-out;
-            -moz-animation: clientarrowop 2s 2s forwards ease-in-out,
-                diagonal 2s infinite forwards ease-in-out;
-            -o-animation: clientarrowop 2s 2s forwards ease-in-out,
-                diagonal 2s infinite forwards ease-in-out;
+            right: -48px;
+            bottom: -48px;
+            width: 50px;
+            animation: diagonal 2s infinite forwards ease-in-out;
+            -webkit-animation: diagonal 2s infinite forwards ease-in-out;
+            -moz-animation: diagonal 2s infinite forwards ease-in-out;
+            -o-animation: diagonal 2s infinite forwards ease-in-out;
+        }
+
+        #clientarrow {
+            width: 100%;
+            object-fit: contain;
+            animation: fade .9s linear paused;
+            animation-fill-mode: both;
         }
 
 
@@ -963,7 +974,7 @@
                 display: none;
             }
 
-            .clients-wrapper {
+            #clients-wrapper {
                 transform: scale(.8);
             }
 
@@ -996,7 +1007,7 @@
                 width: 77%;
             }
 
-            .clients-wrapper {
+            #clients-wrapper {
                 transform: scale(0.85);
             }
 
@@ -1060,13 +1071,13 @@
                 width: 74%;
             }
 
-            .clients-wrapper {
+            #clients-wrapper {
                 transform: scale(0.41);
 
             }
 
 
-            #clientarrow {
+            #clientarrow-wrapper {
                 width: 80px;
             }
 
@@ -1150,7 +1161,7 @@
                 gap: 40px;
             }
 
-            .clients-wrapper {
+            #clients-wrapper {
                 transform: scale(.37);
             }
 

@@ -25,6 +25,8 @@ const char1win = document.getElementById('char1win');
 const char2win = document.getElementById('char2win');
 const char1saf = document.getElementById('char1saf');
 const char2saf = document.getElementById('char2saf');
+const clientswrapper = document.getElementById('clients-wrapper');
+const clientarrowwrapper = document.getElementById('clientarrow-wrapper');
 
 
 
@@ -58,12 +60,12 @@ if (isSafari()) {
 
 function handleTilt() {
     if (window.innerWidth <= 768) {
-        if (clientscontainer.vanillaTilt) {
-            clientscontainer.vanillaTilt.destroy();
+        if (clientswrapper.vanillaTilt) {
+            clientswrapper.vanillaTilt.destroy();
         }
     } else {
-        if (!clientscontainer.vanillaTilt) {
-            VanillaTilt.init(clientscontainer, {
+        if (!clientswrapper.vanillaTilt) {
+            VanillaTilt.init(clientswrapper, {
                 max: 25,
                 speed: 150,
                 glare: true,
@@ -254,10 +256,8 @@ clientscontainer.addEventListener('mouseover', () => {
     state.clienthover = true;
     document.body.style.overflow = "hidden"
     header.scrollIntoView();
-    clientscontainer.style.animation = "unset"
-    clientscontainer.style.opacity = "1"
-    clientarrow.style.animation = "fadeout .5s forwards ease-in-out"
-
+    clientscontainer.style.animationPlayState = "paused";
+    clientarrow.style.animation = "arrowfadeout .5s forwards ease-in-out"
 
 })
 
@@ -265,7 +265,5 @@ clientscontainer.addEventListener('mouseleave', () => {
     state.clienthover = false;
     document.body.style.overflow = "visible"
     document.body.style.overflowX = "hidden"
-    clientscontainer.style.animation = "levitate 1.1s 1s infinite alternate forwards ease-in-out"
-    clientarrow.style.animation = "clientarrowop 2s 1.4s forwards ease-in-out,diagonal 2s infinite forwards ease-in-out"
-
+    clientarrow.style.animation = "arrowfadein .5s forwards ease-in-out"
 })
