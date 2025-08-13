@@ -168,11 +168,11 @@
         }
 
         @keyframes clientsappear {
-            30% {
+            from {
                 opacity: 0;
             }
 
-            100% {
+            to {
                 opacity: 1;
             }
         }
@@ -979,7 +979,7 @@
                 cursor: default !important;
             }
         }
-     
+
 
         /* Mobile */
         @media (max-width: 768px) {

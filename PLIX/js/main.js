@@ -67,7 +67,7 @@ function handleTilt() {
                 max: 25,
                 speed: 150,
                 glare: true,
-                "max-glare": 0.5
+                "max-glare": 0
             });
         }
     }
