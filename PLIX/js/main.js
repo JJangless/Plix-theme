@@ -26,9 +26,6 @@ const char2win = document.getElementById('char2win');
 const char1saf = document.getElementById('char1saf');
 const char2saf = document.getElementById('char2saf');
 const clientswrapper = document.getElementById('clients-wrapper');
-const clientarrowwrapper = document.getElementById('clientarrow-wrapper');
-
-
 
 function updateCursorPosition(e) {
     customcursor.style.top = (e.clientY + 14) + "px";
