@@ -736,8 +736,8 @@
         #clientarrow {
             width: 100%;
             object-fit: contain;
-            animation: fade .9s linear paused;
-            animation-fill-mode: both;
+            animation: arrowfadein .9s forwards;
+            animation-delay: 2.8s;
         }
 
 
