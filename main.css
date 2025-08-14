@@ -1020,6 +1020,11 @@
                 display: none;
             }
 
+            #content1text {
+                width: 84%
+            }
+
+
             #content1text p {
                 font-size: 1.1rem;
                 line-height: 1.7rem;
@@ -1084,6 +1089,10 @@
 
             #clientarrow-wrapper {
                 width: 80px;
+            }
+
+            #content1text p {
+                font-size: 1rem;
             }
 
             #fgcanvas {
@@ -1182,7 +1191,4 @@
                 font-size: 1.4rem;
             }
 
-            .content1text p {
-                font-size: .875rem;
-            }
         }
