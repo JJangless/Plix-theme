@@ -87,10 +87,12 @@
 
     <section id="section1">
         <main class="content1">
-            <div id="blobcontainer" style="transform: scale(0);">
-                <video id="blobwin" class="blobanimate" src="PLIX/resource/blob.webm" loop muted playsinline
-                    webkit-playsinline></video>
-                <img id="blobsaf" src="PLIX/resource/blob.apng" loop muted playsinline webkit-playsinline alt="" />
+            <div id="blob-wrapper" style="transform: scale(0);">
+                <div id="blob-container" class="blobanimate">
+                    <video id="blobwin" src="PLIX/resource/blob.webm" loop muted playsinline webkit-playsinline></video>
+                    <img id="blobsaf" src="PLIX/resource/blob.apng" loop muted playsinline webkit-playsinline alt="" />
+                </div>
+
             </div>
 
 
@@ -126,7 +128,7 @@
         <button style="opacity:0" id="button3"></button>
     </div>
     <section id="section2">
-        <div class="content2container">
+        <div class="content2-container">
             <main class="content2" data-aos="fade-up">
                 <div class="content2tittle">
                     <hr>

@@ -30,13 +30,11 @@ button4.addEventListener('click', () => {
 window.onscroll = () => {
     if (!scrollTrackingEnabled) return;
     if (window.scrollY == "0") {
-        blobwin.pause();
         blobwin.classList.remove("blobanimatetrigger");
         void blobwin.offsetWidth;
         blobwin.classList.add("blobanimatetrigger");
         blobwin.addEventListener('animationend', (event) => {
             scrollTrackingEnabled = false;
-            blobwin.play();
         });
     }
 };

@@ -618,11 +618,18 @@
 
 
 
-        #blobcontainer {
+        #blob-wrapper {
+            /* border:4px solid red; */
             z-index: 4;
             max-width: 100%;
             height: auto;
             position: absolute;
+            display: flex;
+            justify-content: center;
+        }
+
+        #blob-container {
+            /* border:4px solid blue; */
             display: flex;
             justify-content: center;
         }
@@ -816,7 +823,7 @@
             background-color: var(--black2);
         }
 
-        .content2container {
+        .content2-container {
             z-index: 8;
             display: flex;
             flex-direction: column;
@@ -958,7 +965,7 @@
 
         @media (max-width: 1440px) {
 
-            #blobcontainer {
+            #blob-wrapper {
                 width: 50%;
             }
         }
@@ -966,7 +973,7 @@
         /* Tablet */
         @media (max-width: 1024px) {
 
-            #blobcontainer {
+            #blob-wrapper {
                 width: 56%;
             }
 
@@ -1003,7 +1010,7 @@
                 height: 60px;
             }
 
-            #blobcontainer {
+            #blob-wrapper {
                 width: 77%;
             }
 
@@ -1067,7 +1074,7 @@
                 animation: pulse 2s;
             }
 
-            #blobcontainer {
+            #blob-wrapper {
                 width: 74%;
             }
 

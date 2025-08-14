@@ -18,7 +18,7 @@ const icon_in = document.getElementById('icon_in');
 const header = document.querySelector('header');
 const content1text1 = document.getElementById('content1text1');
 const content1text2 = document.getElementById('content1text2');
-const blobcon = document.getElementById('blobcontainer');
+const blobwrap = document.getElementById('blob-wrapper');
 const blobwin = document.getElementById('blobwin');
 const blobsaf = document.getElementById('blobsaf');
 const char1win = document.getElementById('char1win');
@@ -106,11 +106,11 @@ window.addEventListener("load", function () {
         body.style.overflowY = "visible";
     }, 2450);
     clientscontainer.style.animation = "clientsappear 2s forwards, levitate 1.1s 1s infinite alternate forwards ease-in-out"
-    blobcon.style.animation = "blobscaleup 2.5s 1.5s forwards";
+    blobwrap.style.animation = "blobscaleup 2.5s 1.5s forwards";
     fgcanvas.style.animation = "showcanvas 3s forwards ease-in-out";
 })
 
-blobcon.addEventListener('animationend', (event) => {
+blobwrap.addEventListener('animationend', (event) => {
     blobwin.play();
 });
 
@@ -170,7 +170,7 @@ lightclient.addEventListener('mouseover', () => {
     logo.src = "PLIX/resource/logo2.png"
     icon_dl.src = "PLIX/resource/download2.png"
     icon_in.src = "PLIX/resource/install2.png"
-    blobcon.style.filter = "grayscale(100%)"
+    blobwrap.style.filter = "grayscale(100%)"
     document.body.style.animation = "lettherebelight .4s forwards"
     terrainmat.color = new THREE.Color(0xe4e4e4)
     dotmat.color = new THREE.Color(0x585858)
@@ -229,7 +229,7 @@ lightclient.addEventListener('mouseleave', () => {
     logo.src = "PLIX/resource/logo1.png"
     icon_dl.src = "PLIX/resource/download1.png"
     icon_in.src = "PLIX/resource/install1.png"
-    blobcon.style.filter = "unset"
+    blobwrap.style.filter = "unset"
     document.body.style.animation = "lettherebedarkness .4s forwards"
     dotmat.color = new THREE.Color(0x1d1d1d)
     terrainmat.color = new THREE.Color(0x000000)
