@@ -22,7 +22,9 @@
     </style>
     <div id="progress-bar"></div>
     <img style="opacity:0" id="cursor" src="PLIX/resource/arrow.png" alt="">
-    <div id="preloader">
+    <div style="pointer-events: none;" id="preloader">
+        <video style="display:none; object-fit:cover; width:500vw;height:500vh; opacity:.2;" id="blobprewin" src="PLIX/resource/blob.webm" loop muted
+            autoplay playsinline webkit-playsinline></video>
         <img src="PLIX/resource/logo1.png" alt="">
     </div>
     <canvas id="fgcanvas" style="opacity:0"> </canvas>
@@ -89,7 +91,8 @@
         <main class="content1">
             <div id="blob-wrapper" style="transform: scale(0);">
                 <div id="blob-container" class="blobanimate">
-                    <video id="blobwin" src="PLIX/resource/blob.webm" loop muted playsinline webkit-playsinline></video>
+                    <video id="blobwin" src="PLIX/resource/blob.webm" loop muted autoplay playsinline
+                        webkit-playsinline></video>
                     <img id="blobsaf" src="PLIX/resource/blob.apng" loop muted playsinline webkit-playsinline alt="" />
                 </div>
 

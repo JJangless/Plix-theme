@@ -19,6 +19,7 @@ const header = document.querySelector('header');
 const content1text1 = document.getElementById('content1text1');
 const content1text2 = document.getElementById('content1text2');
 const blobwrap = document.getElementById('blob-wrapper');
+const blobprewin = document.getElementById('blobprewin');
 const blobwin = document.getElementById('blobwin');
 const blobsaf = document.getElementById('blobsaf');
 const char1win = document.getElementById('char1win');
@@ -40,6 +41,7 @@ function isSafari() {
 
 
 if (isSafari()) {
+    blobprewin.style.display = "none";
     blobwin.style.display = "none";
     char1saf.style.display = "block";
     char2saf.style.display = "block";
@@ -47,6 +49,7 @@ if (isSafari()) {
     char2win.style.display = "none";
     blobsaf.style.display = "flex";
 } else {
+    blobprewin.style.display = "flex";
     blobwin.style.display = "flex";
     char1saf.style.display = "none";
     char2saf.style.display = "none";
@@ -106,11 +109,6 @@ window.addEventListener("load", function () {
     blobwrap.style.animation = "blobscaleup 2.5s 1.5s forwards";
     fgcanvas.style.animation = "showcanvas 3s forwards ease-in-out";
 })
-
-blobwrap.addEventListener('animationend', (event) => {
-    blobwin.play();
-});
-
 
 function func1(e) {
     const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;

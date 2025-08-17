@@ -18,17 +18,6 @@
             --red: #b10000;
         }
 
-        @keyframes fadeout {
-            0% {
-                opacity: 1;
-            }
-
-            100% {
-                opacity: 0;
-
-            }
-        }
-
         @keyframes letitblur {
             from {
                 backdrop-filter: unset;
@@ -631,7 +620,7 @@
             display: flex;
             justify-content: center;
         }
-
+        
         #blobwin,
         #blobsaf {
             z-index: 4;
@@ -1021,7 +1010,7 @@
             }
 
             #content1text {
-                width: 84%
+                width: 90%
             }
 
 
