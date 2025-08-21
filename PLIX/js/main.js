@@ -107,7 +107,7 @@ window.addEventListener("load", function () {
     }, 2450);
     clientscontainer.style.animation = "clientsappear 2s forwards, levitate 1.1s 1s infinite alternate forwards ease-in-out"
     blobwrap.style.animation = "blobscaleup 2.5s 1.5s forwards";
-    fgcanvas.style.animation = "showcanvas 3.1s forwards ease-in-out";
+    fgcanvas.style.animation = "showcanvas 3.5s forwards ease-in-out";
 })
 
 function func1(e) {
