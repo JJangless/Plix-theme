@@ -109,7 +109,11 @@ function animate() {
 	updatemyvert(line);
 	renderer.render(scene, camera);
 }
+
+window.addEventListener("load", function () {
 animate();
+})
+
 
 
 
