@@ -695,7 +695,7 @@
             position: absolute;
             width: 200px;
             left: -32px;
-            bottom: 2px;
+            bottom: 12px;
         }
 
         #char2win,
@@ -706,7 +706,7 @@
             position: absolute;
             width: 132px;
             right: 8px;
-            bottom: 2px;
+            bottom: 12px;
         }
 
 
