@@ -79,7 +79,7 @@ handleTilt();
 document.addEventListener('mousemove', e => {
     window.addEventListener('pointerdown', (e) => {
         if (e.pointerType === 'mouse') {
-            clientarrow.src = 'PLIX/resource/arrow.png';
+            clientarrow.src = 'PLIX/resource/arrow1.png';
 
         } else if (e.pointerType === 'touch') {
             customcursor.style.opacity = "0";
