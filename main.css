@@ -620,7 +620,7 @@
             display: flex;
             justify-content: center;
         }
-        
+
         #blobwin,
         #blobsaf {
             z-index: 4;
