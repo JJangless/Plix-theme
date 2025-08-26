@@ -309,11 +309,19 @@
         }
 
         * {
+            cursor: url("PLIX/resource/arrow.cur"), auto;
             outline: none;
-            cursor: none;
             user-select: none;
             outline: none;
             box-sizing: border-box;
+        }
+
+        a {
+            cursor: url("PLIX/resource/link.cur"), auto;
+        }
+
+        .modal-buttons img {
+            cursor: url("PLIX/resource/link.cur"), auto;
         }
 
         html {
@@ -321,6 +329,7 @@
         }
 
         body {
+
             overflow-x: hidden !important;
             margin: 0;
             padding: 0;
@@ -862,7 +871,6 @@
         }
 
         a {
-            cursor: none !important;
             color: var(--blue2);
             text-decoration: none;
             transition: color 0.3s ease;
@@ -932,7 +940,6 @@
             width: 42px;
             height: 46px;
             border: none;
-            cursor: pointer;
             border-radius: 8px;
             transition: all .3s ease-in-out forwards;
         }
@@ -980,9 +987,6 @@
                 display: none !important;
             }
 
-            body {
-                cursor: default !important;
-            }
         }
 
 

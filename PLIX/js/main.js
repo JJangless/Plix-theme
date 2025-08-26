@@ -3,7 +3,6 @@ import { dotmat, terrainmat } from './fgcanvas.js';
 import state from './state.js'
 
 const body = document.body;
-const customcursor = document.getElementById('cursor');
 const loader = document.getElementById("preloader");
 const sitename = document.getElementById('logo-text');
 const clientscontainer = document.getElementById("clients");
@@ -27,12 +26,6 @@ const char2win = document.getElementById('char2win');
 const char1saf = document.getElementById('char1saf');
 const char2saf = document.getElementById('char2saf');
 const clientswrapper = document.getElementById('clients-wrapper');
-
-function updateCursorPosition(e) {
-    customcursor.style.top = (e.clientY + 14) + "px";
-    customcursor.style.left = (e.clientX + 15) + "px";
-}
-
 
 function isSafari() {
     const ua = navigator.userAgent;
@@ -109,38 +102,6 @@ window.addEventListener("load", function () {
     blobwrap.style.animation = "blobscaleup 2.5s 1.5s forwards";
     fgcanvas.style.animation = "showcanvas 3.5s forwards ease-in-out";
 })
-
-function func1(e) {
-    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-    const isOverScrollbar = e.clientX >= window.innerWidth - scrollbarWidth;
-
-    if (isOverScrollbar) {
-        customcursor.style.opacity = "0";
-        document.body.style.cursor = "default";
-    } else {
-        customcursor.style.opacity = "1";
-        document.body.style.cursor = "none";
-        updateCursorPosition(e);
-    }
-}
-
-document.body.addEventListener('mouseleave', () => {
-    customcursor.style.opacity = "0";
-});
-
-
-
-document.body.addEventListener("wheel", e => {
-    updateCursorPosition(e);
-});
-
-
-link1.addEventListener("mouseenter", () => {
-    customcursor.src = "PLIX/resource/link.png";
-});
-link1.addEventListener("mouseleave", () => {
-    customcursor.src = "PLIX/resource/arrow.png";
-});
 
 
 document.querySelector('.copyright').innerHTML = "©" + " " + copyrightyear + " " + "GeoffreyCreations"
