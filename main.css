@@ -540,17 +540,8 @@
         .header-buttons button {
             background-color: transparent;
             border: none;
-            padding: clamp(6px, 1.5vw, 10px) clamp(10px, 2vw, 15px);
-            border-radius: 50px;
-            font-size: clamp(0.8rem, 2vw, 0.92rem);
-            transition: all 0.3s ease;
-        }
-
-        .header-buttons button {
-            background-color: transparent;
-            border: none;
             padding: 10px 15px;
-            border-radius: 50px;
+            border-radius: 10px;
             font-size: .92rem;
             transition: all 0.3s ease;
         }
@@ -1050,9 +1041,9 @@
                 gap: 10px;
             }
 
-            .header-buttons button {
+            /* .header-buttons button {
                 border-radius: 10px;
-            }
+            } */
 
             .header_btn_label {
                 display: none;
